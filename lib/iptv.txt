@@ -124,7 +124,7 @@ CCTV4中文国际,http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV
 CCTV4中文国际,http://148.135.93.213/live.php?id=CCTV4$LR•IPV4•39『线路18』
 CCTV4中文国际,http://218.13.14.6:60050/tsfile/live/1004_1.m3u8$LR•IPV4•39『线路19』
 CCTV4中文国际,http://58.57.40.22:9901/tsfile/live/1003_1.m3u8$LR•IPV4•39『线路20』
-CCTV4中文国际,https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4_mbd.m3u8?auth_key=1762228800-1-a1b218e9395d18e923557696454093d3-6a8484dd7beb89337c87379c05f9c680&yid=a1b218e9395d18e923557696454093d3$LR•IPV4•39『线路21』
+CCTV4中文国际,https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4_mbd.m3u8?auth_key=1762232400-1-237e772f801f697d94ff0557c51a4d5a-b51f212b1727356e3b32fea42c8b98c9&yid=237e772f801f697d94ff0557c51a4d5a$LR•IPV4•39『线路21』
 CCTV4中文国际,http://iptv.huuc.edu.cn/hls/cctv4hd.m3u8$LR•IPV4•39『线路22』
 CCTV4中文国际,http://ygbh.site/php/bfgd.php?id=063$LR•IPV4•39『线路23』
 CCTV4中文国际,https://cc06.tv12.xyz/4.m3u8$LR•IPV4•39『线路24』
