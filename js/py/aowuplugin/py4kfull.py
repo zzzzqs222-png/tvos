@@ -95,6 +95,7 @@ class Spider(Spider):
         return result
 
     def detailContent(self, ids):
+        videos = []
         data = self.getpq(ids[0])
         vn = data('meta[property="og:title"]').attr('content')
         pdtitle = data('name="keywords"]').attr('content')
@@ -102,14 +103,17 @@ class Spider(Spider):
         did = ids[0]
         if 'http' not in did:
             did = "https://www.fullhd.xxx" + did
-        vod = {
-            'vod_name': vn,
-            'vod_director': pdtitle,
-            'vod_remarks': 'Xhamster',
-            'vod_play_from': 'Xhamster',
-            'vod_play_url': did
-        }
-        return {'list': [vod]}
+        bofang = did
+
+        videos.append({
+            "vod_id": did,
+            "vod_actor": vn,
+            "vod_director": '',
+            "vod_content": pdtitle,
+            "vod_play_from": '💗数逼毛💗',
+            "vod_play_url": bofang
+                     })
+        return {'list': [videos]}
 
     def searchContent(self, key, quick, pg="1"):
         pass
@@ -195,6 +199,7 @@ class Spider(Spider):
         vhtml = data("script[type='application/ld+json']").text()
         jst = json.loads(vhtml.split('initials=')[-1][:-1])
         return jst
+
 
 
 
