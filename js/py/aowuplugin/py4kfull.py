@@ -153,14 +153,37 @@ class Spider(Spider):
 
     def getlist(self, data):
         vlist = []
+
         for i in data.items():
+            # 1. 尝试获取 img 元素
+            img_element = i('img')
+
+            # 2. 初始化 URL 为 None
+            final_pic_url = None
+
+            if img_element:
+                # 3. 获取 src 和 data-src 属性
+                src_value = img_element.attr('src')
+                data_src_value = img_element.attr('data-src')
+
+                # 4. 核心判断逻辑
+                # 判断 src 是否存在 AND 是否以 Base64 占位符 'data:image/' 开头
+                if src_value and src_value.startswith('data:image/'):
+                    # 如果是占位符，使用 data-src 的值
+                    final_pic_url = data_src_value
+                else:
+                    # 否则，使用 src 的值 (即使是 None 也没关系)
+                    final_pic_url = src_value
+
             vlist.append({
                 'vod_id': i('a').attr('href'),
                 'vod_name': i('a').attr('title'),
-                'vod_pic': i('img.thumb_img').attr("src"),
+                # 5. 使用经过判断处理的 URL
+                'vod_pic': final_pic_url,
                 'vod_remarks': i('.duration').text(),
                 'style': {'ratio': 1.33, 'type': 'rect'}
             })
+
         return vlist
 
     def getpq(self, path=''):
@@ -176,6 +199,7 @@ class Spider(Spider):
         vhtml = data("script[type='application/ld+json']").text()
         jst = json.loads(vhtml.split('initials=')[-1][:-1])
         return jst
+
 
 
 
