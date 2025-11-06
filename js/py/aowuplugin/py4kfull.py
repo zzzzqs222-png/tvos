@@ -95,7 +95,18 @@ class Spider(Spider):
         return result
 
     def detailContent(self, ids):
-        pass
+        data = self.getpq(ids[0])
+        vn = data('meta[property="og:title"]').attr('content')
+        pdtitle = data('name="keywords"]').attr('content')
+        dtext = data('video id > source:first-of-type').attr('src')
+        vod = {
+            'vod_name': vn,
+            'vod_director': pdtitle,
+            'vod_remarks': 'Xhamster',
+            'vod_play_from': 'Xhamster',
+            'vod_play_url': dtext
+        }
+        return {'list': [vod]}
 
     def searchContent(self, key, quick, pg="1"):
         data = self.getpq(f'/search/{key}?page={pg}')
@@ -199,6 +210,7 @@ class Spider(Spider):
         vhtml = data("script[type='application/ld+json']").text()
         jst = json.loads(vhtml.split('initials=')[-1][:-1])
         return jst
+
 
 
 
