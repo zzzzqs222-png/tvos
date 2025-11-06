@@ -95,52 +95,7 @@ class Spider(Spider):
         return result
 
     def detailContent(self, ids):
-        data = self.getpq(ids[0])
-        djs = self.getjsdata(data)
-        vn = data('meta[property="og:title"]').attr('content')
-        dtext = data('#video-tags-list-container')
-        href = dtext('a').attr('href')
-        title = dtext('span[class*="body-bold-"]').eq(0).text()
-        pdtitle = ''
-        if href:
-            pdtitle = '[a=cr:' + json.dumps({'id': 'two_click_' + href, 'name': title}) + '/]' + title + '[/a]'
-        vod = {
-            'vod_name': vn,
-            'vod_director': pdtitle,
-            'vod_remarks': data('.rb-new__info').text(),
-            'vod_play_from': 'Xhamster',
-            'vod_play_url': ''
-        }
-        try:
-            plist = []
-            d = djs['xplayerSettings']['sources']
-            f = d.get('standard')
-
-            def get_sort_key(url):
-                quality = url.split('$')[0]
-                number = ''.join(filter(str.isdigit, quality))
-                number = int(number) if number else 0
-                return -number, quality
-
-            if f:
-                for key, value in f.items():
-                    if isinstance(value, list):
-                        for info in value:
-                            id = self.e64(f'{0}@@@@{info.get("url") or info.get("fallback")}')
-                            plist.append(f"{info.get('label') or info.get('quality')}${id}")
-
-            plist.sort(key=get_sort_key)
-            if d.get('hls'):
-                for format_type, info in d['hls'].items():
-                    if url := info.get('url'):
-                        encoded = self.e64(f'{0}@@@@{url}')
-                        plist.append(f"{format_type}${encoded}")
-
-        except Exception as e:
-            plist = [f"{vn}${self.e64(f'{1}@@@@{ids[0]}')}"]
-            print(f"获取视频信息失败: {str(e)}")
-        vod['vod_play_url'] = '#'.join(plist)
-        return {'list': [vod]}
+        pass
 
     def searchContent(self, key, quick, pg="1"):
         data = self.getpq(f'/search/{key}?page={pg}')
@@ -221,6 +176,7 @@ class Spider(Spider):
         vhtml = data("script[type='application/ld+json']").text()
         jst = json.loads(vhtml.split('initials=')[-1][:-1])
         return jst
+
 
 
 
