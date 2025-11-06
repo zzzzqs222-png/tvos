@@ -129,7 +129,7 @@ class Spider(Spider):
             'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8',
             'priority': 'u=1, i',
         }
-        ids = self.d64(id).split('@@@@')
+        ids = self.id
         return {'parse': int(ids[0]), 'url': f'{self.proxy}{ids[1]}', 'header': headers}
 
     def localProxy(self, param):
@@ -210,6 +210,7 @@ class Spider(Spider):
         vhtml = data("script[type='application/ld+json']").text()
         jst = json.loads(vhtml.split('initials=')[-1][:-1])
         return jst
+
 
 
 
