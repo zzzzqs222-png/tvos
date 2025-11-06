@@ -100,6 +100,8 @@ class Spider(Spider):
         pdtitle = data('name="keywords"]').attr('content')
         dtext = data('video id > source:first-of-type').attr('src')
         did = ids[0]
+        if 'http' not in did:
+            did = "https://www.fullhd.xxx" + did
         vod = {
             'vod_name': vn,
             'vod_director': pdtitle,
@@ -216,6 +218,7 @@ class Spider(Spider):
         vhtml = data("script[type='application/ld+json']").text()
         jst = json.loads(vhtml.split('initials=')[-1][:-1])
         return jst
+
 
 
 
