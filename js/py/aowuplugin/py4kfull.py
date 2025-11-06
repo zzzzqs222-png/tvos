@@ -112,8 +112,7 @@ class Spider(Spider):
         return {'list': [vod]}
 
     def searchContent(self, key, quick, pg="1"):
-        data = self.getpq(f'/search/{key}?page={pg}')
-        return {'list': self.getlist(data(".margin-fix .item")), 'page': pg}
+        pass
 
     def playerContent(self, flag, id, vipFlags):
         return {"parse": 0, "url": id, "header": {'User-Agent': 'User-Agent: Lavf/58.12.100'}}
@@ -196,6 +195,7 @@ class Spider(Spider):
         vhtml = data("script[type='application/ld+json']").text()
         jst = json.loads(vhtml.split('initials=')[-1][:-1])
         return jst
+
 
 
 
