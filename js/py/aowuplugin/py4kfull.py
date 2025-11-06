@@ -99,12 +99,13 @@ class Spider(Spider):
         vn = data('meta[property="og:title"]').attr('content')
         pdtitle = data('name="keywords"]').attr('content')
         dtext = data('video id > source:first-of-type').attr('src')
+        did = ids[0]
         vod = {
             'vod_name': vn,
             'vod_director': pdtitle,
             'vod_remarks': 'Xhamster',
             'vod_play_from': 'Xhamster',
-            'vod_play_url': dtext
+            'vod_play_url': did
         }
         return {'list': [vod]}
 
@@ -215,6 +216,7 @@ class Spider(Spider):
         vhtml = data("script[type='application/ld+json']").text()
         jst = json.loads(vhtml.split('initials=')[-1][:-1])
         return jst
+
 
 
 
