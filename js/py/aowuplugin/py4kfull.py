@@ -96,7 +96,6 @@ class Spider(Spider):
 
     def detailContent(self, ids):
         data = self.getpq(ids[0])
-        djs = self.getjsdata(data)
         vn = data('meta[property="og:title"]').attr('content')
         pdtitle = data('name="keywords"]').attr('content')
 
@@ -107,9 +106,25 @@ class Spider(Spider):
             'vod_play_from': 'Xhamster',
             'vod_play_url': ''
         }
-        plist = [f"{vn}${ids[0]}')"]
-        vod['vod_play_url'] = '#'.join(plist)
         
+        vsource_list = data('#video source')
+        c = []
+        # 遍历所有 <source> 标签
+        if vsource_list:
+            # 使用 .items() 遍历所有 PyQuery 对象
+            for source in vsource_list.items():
+                label = source.attr('label')  # 剧集名称 = label 属性
+                src_url = source.attr('src')  # 剧集 URL = src 属性
+
+                if label and src_url:
+                    # 拼接格式: 剧集名称$剧集URL
+                    c.append(f"{label}${src_url}")
+            # 拼接所有链接
+            vod['vod_play_url'] = '#'.join(c)
+        else:
+            # 如果没有找到 <source> 标签，则使用默认的详情页链接
+            vod['vod_play_url'] = f"{vod['vod_name']}${ids[0]}"
+
         return {'list': [vod]}
 
     def searchContent(self, key, quick, pg="1"):
@@ -196,6 +211,7 @@ class Spider(Spider):
         vhtml = data("script[type='application/ld+json']").text()
         jst = json.loads(vhtml.split('initials=')[-1][:-1])
         return jst
+
 
 
 
