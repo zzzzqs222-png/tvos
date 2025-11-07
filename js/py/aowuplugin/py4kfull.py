@@ -1,9 +1,3 @@
-"""
-
-作者 乐哥 🚓 内容均从互联网收集而来 仅供交流学习使用 版权归原创者所有 如侵犯了您的权益 请通知作者 将及时删除侵权内容
-                    ====================lege====================
-
-"""
 
 import requests
 from bs4 import BeautifulSoup
@@ -45,12 +39,13 @@ class Spider(Spider):
 
     def homeContent(self, filter):
         result = {}
-        result = {"class": [{"type_id": "latest-updates", "type_name": "最新是视频"},
-                            {"type_id": "top-rated", "type_name": "最佳视频"},
-                            {"type_id": "most-popular", "type_name": "热门影片"}],
+        result = {"class": [{"type_id": "latest-updates", "type_name": "最新"},
+                            {"type_id": "top-rated", "type_name": "最佳视频🌠"},
+                            {"type_id": "most-popular", "type_name": "热门影片🌠"}],
                  }
 
         return result
+
 
     def homeVideoContent(self):
         videos = []
@@ -279,14 +274,3 @@ class Spider(Spider):
         elif params['type'] == "ts":
             return self.proxyTs(params)
         return None
-
-
-
-
-
-
-
-
-
-
-
