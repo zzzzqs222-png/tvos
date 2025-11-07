@@ -47,7 +47,6 @@
         	"图片": "src=\"&&\"",
         	"标题": "title=\"&&\"",
         	"链接": "href=\"&&\"",
-			"状态": "更新："class=\"video-info\"&&</video>",
 			"线路数组": "class=\"video-js\"&&</div>",
             "线路标题": "label=\"&&\"",
 			"播放数组": "class=\"video-js\"&&</video>",
