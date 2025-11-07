@@ -43,67 +43,6 @@ class Spider(Spider):
     def manualVideoCheck(self):
         pass
 
-    def extract_middle_text(self, text, start_str, end_str, pl, start_index1: str = '', end_index2: str = ''):
-        if pl == 3:
-            plx = []
-            while True:
-                start_index = text.find(start_str)
-                if start_index == -1:
-                    break
-                end_index = text.find(end_str, start_index + len(start_str))
-                if end_index == -1:
-                    break
-                middle_text = text[start_index + len(start_str):end_index]
-                plx.append(middle_text)
-                text = text.replace(start_str + middle_text + end_str, '')
-            if len(plx) > 0:
-                purl = ''
-                for i in range(len(plx)):
-                    matches = re.findall(start_index1, plx[i])
-                    output = ""
-                    for match in matches:
-                        match3 = re.search(r'(?:^|[^0-9])(\d+)(?:[^0-9]|$)', match[1])
-                        if match3:
-                            number = match3.group(1)
-                        else:
-                            number = 0
-                        if 'http' not in match[0]:
-                            output += f"#{'📽️' + match[1]}${number}{xurl}{match[0]}"
-                        else:
-                            output += f"#{'📽️' + match[1]}${number}{match[0]}"
-                    output = output[1:]
-                    purl = purl + output + "$$$"
-                purl = purl[:-3]
-                return purl
-            else:
-                return ""
-        else:
-            start_index = text.find(start_str)
-            if start_index == -1:
-                return ""
-            end_index = text.find(end_str, start_index + len(start_str))
-            if end_index == -1:
-                return ""
-
-        if pl == 0:
-            middle_text = text[start_index + len(start_str):end_index]
-            return middle_text.replace("\\", "")
-
-        if pl == 1:
-            middle_text = text[start_index + len(start_str):end_index]
-            matches = re.findall(start_index1, middle_text)
-            if matches:
-                jg = ' '.join(matches)
-                return jg
-
-        if pl == 2:
-            middle_text = text[start_index + len(start_str):end_index]
-            matches = re.findall(start_index1, middle_text)
-            if matches:
-                new_list = [f'✨{item}' for item in matches]
-                jg = '$$$'.join(new_list)
-                return jg
-
     def homeContent(self, filter):
         result = {}
         result = {"class": [{"type_id": "latest-updates", "type_name": "最新视频🌠"},
@@ -341,3 +280,4 @@ class Spider(Spider):
         elif params['type'] == "ts":
             return self.proxyTs(params)
         return None
+
