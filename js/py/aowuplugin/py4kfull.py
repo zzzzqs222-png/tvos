@@ -3,6 +3,9 @@
 # by嗷呜
 import json
 import sys
+import requests
+from bs4 import BeautifulSoup
+import re
 from base64 import b64decode, b64encode
 from pyquery import PyQuery as pq
 from requests import Session
@@ -125,19 +128,33 @@ class Spider(Spider):
         pass
 
     def playerContent(self, flag, id, vipFlags):
-        try:
-            data=self.getpq(id)
-            p,url=0,data('video source:first-of-type').attr('src')
-            if not url:raise Exception("未找到播放地址")
-        except Exception as e:
-            p,url=1,f"{self.host}{id}"
-        headers = {
-            'origin': self.host,
-            'referer': f'{self.host}/',
-            'sec-ch-ua-platform': '"macOS"',
-            'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.8 Mobile/15E148 Safari/604.1',
-        }
-        return  {'parse': p, 'url': url, 'header': headers}
+        parts = id.split("http")
+        xiutan = 0
+        if xiutan == 0:
+            if len(parts) > 1:
+                before_https, after_https = parts[0], 'http' + parts[1]
+            res = requests.get(url=after_https, headers=headerx)
+            res = res.text
+
+            url2 = self.extract_middle_text(res, '<video', '</video>', 0).replace('\\', '')
+            soup = BeautifulSoup(url2, 'html.parser')
+            first_source = soup.find('source')
+            src_value = first_source.get('src')
+
+            response = requests.head(src_value, allow_redirects=False)
+            if response.status_code == 302:
+                redirect_url = response.headers['Location']
+
+            response = requests.head(redirect_url, allow_redirects=False)
+            if response.status_code == 302:
+                redirect_url = response.headers['Location']
+
+            result = {}
+            result["parse"] = xiutan
+            result["playUrl"] = ''
+            result["url"] = redirect_url
+            result["header"] = headerx
+            return result
 
     def localProxy(self, param):
         pass
@@ -217,6 +234,7 @@ class Spider(Spider):
     #     vhtml = data("script[type='application/ld+json']").text()
     #     jst = json.loads(vhtml.split('initials=')[-1][:-1])
     #     return jst
+
 
 
 
