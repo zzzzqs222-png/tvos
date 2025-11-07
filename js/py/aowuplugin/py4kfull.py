@@ -9,9 +9,15 @@ import re
 from base64 import b64decode, b64encode
 from pyquery import PyQuery as pq
 from requests import Session
+
 sys.path.append('..')
 from base.spider import Spider
 
+xurl = "https://www.fullhd.xxx/"
+
+headerx = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.87 Safari/537.36'
+}
 
 class Spider(Spider):
 
@@ -52,6 +58,8 @@ class Spider(Spider):
     }
 
     host = "https://www.fullhd.xxx"
+    
+    
 
     def homeContent(self, filter):
         result = {}
@@ -75,30 +83,67 @@ class Spider(Spider):
         data = self.getpq()
         return {'list': self.getlist(data(".margin-fix .item"))}
 
-    def categoryContent(self, tid, pg, filter, extend):
-        vdata = []
+    def categoryContent(self, cid, pg, filter, extend):
         result = {}
+        if pg:
+            page = int(pg)
+        else:
+            page = 1
+        page = int(pg)
+        videos = []
+
+        if page == '1':
+            url = f'{xurl}/{cid}/'
+
+        else:
+            url = f'{xurl}/{cid}/{str(page)}/'
+
+        try:
+            detail = requests.get(url=url, headers=headerx)
+            detail.encoding = "utf-8"
+            res = detail.text
+            doc = BeautifulSoup(res, "lxml")
+
+            soups = doc.find_all('div', class_="margin-fix")
+
+            for soup in soups:
+                vods = soup.find_all('div', class_="item")
+
+                for vod in vods:
+
+                    names = vod.find_all('a')
+                    name = names[0]['title']
+
+                    ids = vod.find_all('a')
+                    id = ids[0]['href']
+
+                    pics = vod.find('img', class_="lazyload")
+                    pic = pics['data-src']
+
+                    if 'http' not in pic:
+                        pic = xurl + pic
+
+                    remarks = vod.find('div', class_="img thumb__img")
+                    remark = remarks.text.strip()
+
+                    video = {
+                        "vod_id": id,
+                        "vod_name": name,
+                        "vod_pic": pic,
+                        "vod_remarks": remark
+                    }
+                    videos.append(video)
+
+        except:
+            pass
+        result = {'list': videos}
         result['page'] = pg
         result['pagecount'] = 9999
         result['limit'] = 90
         result['total'] = 999999
-        if tid in ['/latest-updates', '/top-rated', '/most-popular'] and pg == '1':
-            data = self.getpq(f'{tid}{extend.get("type", "")}/{pg}/')
-            vdata = self.getlist(data(".margin-fix .item"))
-        elif tid in ['/latest-updates', '/top-rated', '/most-popular']:
-            data = self.getpq(f'/{tid}{extend.get("type", "")}/{pg}/')
-            vdata = self.getlist(data(".margin-fix .item"))
-            
-        result['list'] = vdata
         return result
 
     def detailContent(self, ids):
-        xurl = "https://www.fullhd.xxx/"
-
-        headerx = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.87 Safari/537.36'
-        }
-        
         did = ids[0]
         result = {}
         videos = []
@@ -132,8 +177,8 @@ class Spider(Spider):
 
     def playerContent(self, flag, id, vipFlags):
         headerx = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.87 Safari/537.36'
-          }
+            'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.87 Safari/537.36'
+        }
         parts = id.split("http")
         xiutan = 0
         if xiutan == 0:
@@ -191,7 +236,6 @@ class Spider(Spider):
     #         print(f"Base64解码错误: {str(e)}")
     #         return ""
 
-
     def getlist(self, data):
         vlist = []
 
@@ -228,8 +272,8 @@ class Spider(Spider):
         return vlist
 
     def getpq(self, path=''):
-        url=f"{self.host}{path}"
-        data=self.fetch(url,headers=self.headers).text
+        url = f"{self.host}{path}"
+        data = self.fetch(url, headers=self.headers).text
         try:
             return pq(data)
         except Exception as e:
@@ -240,4 +284,3 @@ class Spider(Spider):
     #     vhtml = data("script[type='application/ld+json']").text()
     #     jst = json.loads(vhtml.split('initials=')[-1][:-1])
     #     return jst
-
