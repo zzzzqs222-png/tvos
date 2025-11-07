@@ -207,8 +207,14 @@ class Spider(Spider):
             result["header"] = headerx
             return result
 
-    def localProxy(self, param):
-        pass
+    def localProxy(self, params):
+        if params['type'] == "m3u8":
+            return self.proxyM3u8(params)
+        elif params['type'] == "media":
+            return self.proxyMedia(params)
+        elif params['type'] == "ts":
+            return self.proxyTs(params)
+        return None
 
     # def gethost(self):
     #     try:
@@ -284,3 +290,4 @@ class Spider(Spider):
     #     vhtml = data("script[type='application/ld+json']").text()
     #     jst = json.loads(vhtml.split('initials=')[-1][:-1])
     #     return jst
+
