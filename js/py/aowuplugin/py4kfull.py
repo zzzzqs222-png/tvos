@@ -19,7 +19,7 @@ import binascii
 
 sys.path.append('..')
 
-xurl = "https://www.fullhd.xxx/zh/"
+xurl = "https://www.fullhd.xxx/"
 
 headerx = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.87 Safari/537.36'
@@ -45,9 +45,9 @@ class Spider(Spider):
 
     def homeContent(self, filter):
         result = {}
-        result = {"class": [{"type_id": "latest-updates/", "type_name": "最新视频"},
-                            {"type_id": "top-rated/", "type_name": "最佳视频"},
-                            {"type_id": "most-popular/", "type_name": "热门影片"}],
+        result = {"class": [{"type_id": "latest-updates", "type_name": "最新视频"},
+                            {"type_id": "top-rated", "type_name": "最佳视频"},
+                            {"type_id": "most-popular", "type_name": "热门影片"}],
                  }
 
         return result
@@ -279,6 +279,7 @@ class Spider(Spider):
         elif params['type'] == "ts":
             return self.proxyTs(params)
         return None
+
 
 
 
