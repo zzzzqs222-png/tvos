@@ -40,11 +40,11 @@
             "api": "csp_XBPQ",
             "jar": "./jar/XBPQ.jar",
             "ext": {
-        	"主页url": "https://www.fullhd.xxx/zh/",
+        	"主页url": "https://www.fullhd.xxx/",
         	"直接播放": "1",
         	"嗅探词": "index.m3u8#.mp4#m3u8#.m3u8#/tos/#.flv#video/tos",
         	"数组": "class=\"margin-fix\"&&</div>",
-        	"图片": "fetchpriority=\"high\" src=\"&&\"",
+        	"图片": "src=\"&&\"",
         	"标题": "title=\"&&\"",
         	"链接": "href=\"&&\"",
         	"分类url": "https://www.fullhd.xxx/zh/{cateId}/{catePg}/",
