@@ -131,12 +131,6 @@ class Spider(Spider):
         pass
 
     def playerContent(self, flag, id, vipFlags):
-        try:
-            data=self.getpq(id)
-            p,url=0,data('#video source:first-of-type').attr('src')
-            if not url:raise Exception("未找到播放地址")
-        except Exception as e:
-            p,url=1,f"{self.host}{id}"
         headers = {
             'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.5410.0 Safari/537.36',
             'pragma': 'no-cache',
@@ -153,7 +147,8 @@ class Spider(Spider):
             'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8',
             'priority': 'u=1, i',
         }
-        return  {'parse': p, 'url': url, 'header': headers}
+        ids = id.split("http")
+        return {'parse': int(ids[0]), 'url': f'{ids[1]}', 'header': headers}
 
     def localProxy(self, param):
         pass
@@ -233,6 +228,7 @@ class Spider(Spider):
         vhtml = data("script[type='application/ld+json']").text()
         jst = json.loads(vhtml.split('initials=')[-1][:-1])
         return jst
+
 
 
 
