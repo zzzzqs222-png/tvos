@@ -93,36 +93,39 @@ class Spider(Spider):
         return result
 
     def detailContent(self, ids):
-        data = self.getpq(ids[0])
-        vn = data('meta[property="og:title"]').attr('content')
-        pdtitle = data('name="keywords"]').attr('content')
+        xurl = "https://www.fullhd.xxx/"
 
-        vod = {
-            'vod_name': vn,
-            'vod_director': pdtitle,
-            'vod_remarks': '1231',
-            'vod_play_from': 'Xhamster',
-            'vod_play_url': ''
+        headerx = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.87 Safari/537.36'
         }
-        vsource_list = data('#video source')
-        c = []
-        # 遍历所有 <source> 标签
-        if vsource_list:
-            # 使用 .items() 遍历所有 PyQuery 对象
-            for source in vsource_list.items():
-                label = source.attr('label')  # 剧集名称 = label 属性
-                src_url = source.attr('src')  # 剧集 URL = src 属性
+        
+        did = ids[0]
+        result = {}
+        videos = []
+        playurl = ''
+        if 'http' not in did:
+            did = xurl + did
+        res1 = requests.get(url=did, headers=headerx)
+        res1.encoding = "utf-8"
+        res = res1.text
 
-                if label and src_url:
-                    # 拼接格式: 剧集名称$剧集URL
-                    c.append(f"{label}${src_url}")
-            # 拼接所有链接
-            vod['vod_play_url'] = '#'.join(c)
-        else:
-            # 如果没有找到 <source> 标签，则使用默认的详情页链接
-            vod['vod_play_url'] = f"{vod['vod_name']}${ids[0]}"
+        content = '资源来源于网络🚓侵权请联系删除👉' + self.extract_middle_text(res, '<h1>', '</h1>', 0)
 
-        return {'list': [vod]}
+        yanuan = self.extract_middle_text(res, '<span>Pornstars:</span>', '</div>', 1, 'href=".*?">(.*?)</a>')
+
+        bofang = did
+
+        videos.append({
+            "vod_id": did,
+            "vod_actor": yanuan,
+            "vod_director": '',
+            "vod_content": content,
+            "vod_play_from": '💗数逼毛💗',
+            "vod_play_url": bofang
+        })
+
+        result['list'] = videos
+        return result
 
     def searchContent(self, key, quick, pg="1"):
         pass
@@ -237,3 +240,4 @@ class Spider(Spider):
     #     vhtml = data("script[type='application/ld+json']").text()
     #     jst = json.loads(vhtml.split('initials=')[-1][:-1])
     #     return jst
+
