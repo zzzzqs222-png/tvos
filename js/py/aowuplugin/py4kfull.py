@@ -128,6 +128,9 @@ class Spider(Spider):
         pass
 
     def playerContent(self, flag, id, vipFlags):
+        headerx = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.87 Safari/537.36'
+          }
         parts = id.split("http")
         xiutan = 0
         if xiutan == 0:
@@ -234,42 +237,3 @@ class Spider(Spider):
     #     vhtml = data("script[type='application/ld+json']").text()
     #     jst = json.loads(vhtml.split('initials=')[-1][:-1])
     #     return jst
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
