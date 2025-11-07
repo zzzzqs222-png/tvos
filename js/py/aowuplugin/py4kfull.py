@@ -19,7 +19,7 @@ import binascii
 
 sys.path.append('..')
 
-xurl = "https://www.fullhd.xxx/"
+xurl = "https://www.fullhd.xxx/zh/"
 
 headerx = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.87 Safari/537.36'
@@ -279,6 +279,7 @@ class Spider(Spider):
         elif params['type'] == "ts":
             return self.proxyTs(params)
         return None
+
 
 
 
