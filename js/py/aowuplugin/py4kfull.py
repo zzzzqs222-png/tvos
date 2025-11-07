@@ -46,9 +46,9 @@ class Spider(Spider):
     def homeContent(self, filter):
         result = {}
         cateManual = {
-            "最新视频": "/latest-updates",
-            "最佳视频": "/top-rated",
-            "热门影片": "/most-popular"
+            "最新视频": "latest-updates",
+            "最佳视频": "top-rated",
+            "热门影片": "most-popular"
         }
         classes = []
         filters = {}
@@ -288,5 +288,6 @@ class Spider(Spider):
         elif params['type'] == "ts":
             return self.proxyTs(params)
         return None
+
 
 
