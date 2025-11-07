@@ -127,7 +127,7 @@ class Spider(Spider):
     def playerContent(self, flag, id, vipFlags):
         try:
             data=self.getpq(id)
-            p,url=0,data('#video source').attr('src')
+            p,url=0,data('video source:first-of-type').attr('src')
             if not url:raise Exception("未找到播放地址")
         except Exception as e:
             p,url=1,f"{self.host}{id}"
@@ -217,6 +217,7 @@ class Spider(Spider):
     #     vhtml = data("script[type='application/ld+json']").text()
     #     jst = json.loads(vhtml.split('initials=')[-1][:-1])
     #     return jst
+
 
 
 
