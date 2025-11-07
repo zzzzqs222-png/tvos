@@ -1,30 +1,40 @@
-# coding=utf-8
-# !/usr/bin/python
-# by嗷呜
-import json
-import sys
+"""
+
+作者 乐哥 🚓 内容均从互联网收集而来 仅供交流学习使用 版权归原创者所有 如侵犯了您的权益 请通知作者 将及时删除侵权内容
+                    ====================lege====================
+
+"""
+
 import requests
 from bs4 import BeautifulSoup
 import re
-from base64 import b64decode, b64encode
-from pyquery import PyQuery as pq
-from requests import Session
+from base.spider import Spider
+import sys
+import json
+import base64
+import urllib.parse
+from Crypto.Cipher import ARC4
+from Crypto.Util.Padding import unpad
+import binascii
 
 sys.path.append('..')
-from base.spider import Spider
 
-xurl = "https://www.fullhd.xxx/"
+xurl = "https://www.fullhd.xxx/zh/"
 
 headerx = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.87 Safari/537.36'
-}
+          }
+
+pm = ''
 
 class Spider(Spider):
-
-    def init(self, extend=""):
-        pass
+    global xurl
+    global headerx
 
     def getName(self):
+        return "首页"
+
+    def init(self, extend):
         pass
 
     def isVideoFormat(self, url):
@@ -33,57 +43,122 @@ class Spider(Spider):
     def manualVideoCheck(self):
         pass
 
-    def destroy(self):
-        pass
+    def extract_middle_text(self, text, start_str, end_str, pl, start_index1: str = '', end_index2: str = ''):
+        if pl == 3:
+            plx = []
+            while True:
+                start_index = text.find(start_str)
+                if start_index == -1:
+                    break
+                end_index = text.find(end_str, start_index + len(start_str))
+                if end_index == -1:
+                    break
+                middle_text = text[start_index + len(start_str):end_index]
+                plx.append(middle_text)
+                text = text.replace(start_str + middle_text + end_str, '')
+            if len(plx) > 0:
+                purl = ''
+                for i in range(len(plx)):
+                    matches = re.findall(start_index1, plx[i])
+                    output = ""
+                    for match in matches:
+                        match3 = re.search(r'(?:^|[^0-9])(\d+)(?:[^0-9]|$)', match[1])
+                        if match3:
+                            number = match3.group(1)
+                        else:
+                            number = 0
+                        if 'http' not in match[0]:
+                            output += f"#{'📽️' + match[1]}${number}{xurl}{match[0]}"
+                        else:
+                            output += f"#{'📽️' + match[1]}${number}{match[0]}"
+                    output = output[1:]
+                    purl = purl + output + "$$$"
+                purl = purl[:-3]
+                return purl
+            else:
+                return ""
+        else:
+            start_index = text.find(start_str)
+            if start_index == -1:
+                return ""
+            end_index = text.find(end_str, start_index + len(start_str))
+            if end_index == -1:
+                return ""
 
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36',
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-        'sec-ch-ua': '"Not(A:Brand";v="99", "Google Chrome";v="133", "Chromium";v="133"',
-        'sec-ch-ua-mobile': '?0',
-        'sec-ch-ua-full-version': '"133.0.6943.98"',
-        'sec-ch-ua-arch': '"x86"',
-        'sec-ch-ua-platform': '"Windows"',
-        'sec-ch-ua-platform-version': '"19.0.0"',
-        'sec-ch-ua-model': '""',
-        'sec-ch-ua-full-version-list': '"Not(A:Brand";v="99.0.0.0", "Google Chrome";v="133.0.6943.98", "Chromium";v="133.0.6943.98"',
-        'dnt': '1',
-        'upgrade-insecure-requests': '1',
-        'sec-fetch-site': 'none',
-        'sec-fetch-mode': 'navigate',
-        'sec-fetch-user': '?1',
-        'sec-fetch-dest': 'document',
-        'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8',
-        'priority': 'u=0, i'
-    }
+        if pl == 0:
+            middle_text = text[start_index + len(start_str):end_index]
+            return middle_text.replace("\\", "")
 
-    host = "https://www.fullhd.xxx"
-    
-    
+        if pl == 1:
+            middle_text = text[start_index + len(start_str):end_index]
+            matches = re.findall(start_index1, middle_text)
+            if matches:
+                jg = ' '.join(matches)
+                return jg
+
+        if pl == 2:
+            middle_text = text[start_index + len(start_str):end_index]
+            matches = re.findall(start_index1, middle_text)
+            if matches:
+                new_list = [f'✨{item}' for item in matches]
+                jg = '$$$'.join(new_list)
+                return jg
 
     def homeContent(self, filter):
         result = {}
-        cateManual = {
-            "最新视频": "/latest-updates",
-            "最佳视频": "/top-rated",
-            "热门影片": "/most-popular"
-        }
-        classes = []
-        filters = {}
-        for k in cateManual:
-            classes.append({
-                'type_name': k,
-                'type_id': cateManual[k]
-            })
-        result['class'] = classes
-        result['filters'] = filters
+        result = {"class": [{"type_id": "latest-updates", "type_name": "最新视频🌠"},
+                            {"type_id": "top-rated", "type_name": "最佳视频🌠"},
+                            {"type_id": "most-popular", "type_name": "热门影片🌠"}],
+                 }
+
         return result
 
-    def homeVideoContent(self):
-        data = self.getpq()
-        return {'list': self.getlist(data(".margin-fix .item"))}
 
-    def categoryContent(self, cid, pg, filter, extend):
+    def homeVideoContent(self):
+        videos = []
+        try:
+            detail = requests.get(url=xurl, headers=headerx)
+            detail.encoding = "utf-8"
+            res = detail.text
+            doc = BeautifulSoup(res, "lxml")
+
+            soups = doc.find_all('div', class_="margin-fix")
+
+            if soups and len(soups) > 1:
+                soups = soups[0]
+                vods = soups.find_all('div', class_="item")
+
+                for vod in vods:
+
+                    names = vod.find_all('a')
+                    name = names[0]['title']
+
+                    ids = vod.find_all('a')
+                    id = ids[0]['href']
+
+                    pics = vod.find('img', class_="lazyload")
+                    pic = pics['data-src']
+
+                    if 'http' not in pic:
+                        pic = xurl + pic
+
+                    remarks = vod.find('div', class_="img thumb__img")
+                    remark = remarks.text.strip()
+
+                    video = {
+                        "vod_id": id,
+                        "vod_name": name,
+                        "vod_pic": pic,
+                        "vod_remarks": remark
+                             }
+                    videos.append(video)
+
+            result = {'list': videos}
+            return result
+        except:
+            pass
+
+    def categoryContent(self, cid, pg, filter, ext):
         result = {}
         if pg:
             page = int(pg)
@@ -131,7 +206,7 @@ class Spider(Spider):
                         "vod_name": name,
                         "vod_pic": pic,
                         "vod_remarks": remark
-                    }
+                             }
                     videos.append(video)
 
         except:
@@ -144,6 +219,7 @@ class Spider(Spider):
         return result
 
     def detailContent(self, ids):
+        global pm
         did = ids[0]
         result = {}
         videos = []
@@ -154,9 +230,9 @@ class Spider(Spider):
         res1.encoding = "utf-8"
         res = res1.text
 
-        content = '资源来源于网络🚓侵权请联系删除👉' + self.extract_middle_text(res, '<h1>', '</h1>', 0)
+        content = '资源来源于网络🚓侵权请联系删除👉' + self.extract_middle_text(res,'<h1>','</h1>', 0)
 
-        yanuan = self.extract_middle_text(res, '<span>Pornstars:</span>', '</div>', 1, 'href=".*?">(.*?)</a>')
+        yanuan = self.extract_middle_text(res, '<span>Pornstars:</span>','</div>',1, 'href=".*?">(.*?)</a>')
 
         bofang = did
 
@@ -167,18 +243,12 @@ class Spider(Spider):
             "vod_content": content,
             "vod_play_from": '💗数逼毛💗',
             "vod_play_url": bofang
-        })
+                     })
 
         result['list'] = videos
         return result
 
-    def searchContent(self, key, quick, pg="1"):
-        pass
-
     def playerContent(self, flag, id, vipFlags):
-        headerx = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.87 Safari/537.36'
-        }
         parts = id.split("http")
         xiutan = 0
         if xiutan == 0:
@@ -207,6 +277,62 @@ class Spider(Spider):
             result["header"] = headerx
             return result
 
+    def searchContentPage(self, key, quick, page):
+        result = {}
+        videos = []
+        if not page:
+            page = '1'
+        if page == '1':
+            url = f'{xurl}/search/{key}/'
+
+        else:
+            url = f'{xurl}/search/{key}/{str(page)}/'
+
+        detail = requests.get(url=url, headers=headerx)
+        detail.encoding = "utf-8"
+        res = detail.text
+        doc = BeautifulSoup(res, "lxml")
+
+        soups = doc.find_all('div', class_="margin-fix")
+
+        for soup in soups:
+            vods = soup.find_all('div', class_="item")
+
+            for vod in vods:
+
+                    names = vod.find_all('a')
+                    name = names[0]['title']
+
+                    ids = vod.find_all('a')
+                    id = ids[0]['href']
+
+                    pics = vod.find('img', class_="lazyload")
+                    pic = pics['data-src']
+
+                    if 'http' not in pic:
+                        pic = xurl + pic
+
+                    remarks = vod.find('div', class_="img thumb__img")
+                    remark = remarks.text.strip()
+
+                    video = {
+                        "vod_id": id,
+                        "vod_name": name,
+                        "vod_pic": pic,
+                        "vod_remarks": remark
+                             }
+                    videos.append(video)
+
+        result['list'] = videos
+        result['page'] = page
+        result['pagecount'] = 9999
+        result['limit'] = 90
+        result['total'] = 999999
+        return result
+
+    def searchContent(self, key, quick):
+        return self.searchContentPage(key, quick, '1')
+
     def localProxy(self, params):
         if params['type'] == "m3u8":
             return self.proxyM3u8(params)
@@ -215,79 +341,3 @@ class Spider(Spider):
         elif params['type'] == "ts":
             return self.proxyTs(params)
         return None
-
-    # def gethost(self):
-    #     try:
-    #         response = self.fetch(f'{self.proxy}https://www.fullhd.xxx', headers=self.headers, allow_redirects=False)
-    #         return response.headers['Location']
-    #     except Exception as e:
-    #         print(f"获取主页失败: {str(e)}")
-    #         return "https://www.fullhd.xxx"
-
-    # def e64(self, text):
-    #     try:
-    #         text_bytes = text.encode('utf-8')
-    #         encoded_bytes = b64encode(text_bytes)
-    #         return encoded_bytes.decode('utf-8')
-    #     except Exception as e:
-    #         print(f"Base64编码错误: {str(e)}")
-    #         return ""
-
-    # def d64(self, encoded_text):
-    #     try:
-    #         encoded_bytes = encoded_text.encode('utf-8')
-    #         decoded_bytes = b64decode(encoded_bytes)
-    #         return decoded_bytes.decode('utf-8')
-    #     except Exception as e:
-    #         print(f"Base64解码错误: {str(e)}")
-    #         return ""
-
-    def getlist(self, data):
-        vlist = []
-
-        for i in data.items():
-            # 1. 尝试获取 img 元素
-            img_element = i('img')
-
-            # 2. 初始化 URL 为 None
-            final_pic_url = None
-
-            if img_element:
-                # 3. 获取 src 和 data-src 属性
-                src_value = img_element.attr('src')
-                data_src_value = img_element.attr('data-src')
-
-                # 4. 核心判断逻辑
-                # 判断 src 是否存在 AND 是否以 Base64 占位符 'data:image/' 开头
-                if src_value and src_value.startswith('data:image/'):
-                    # 如果是占位符，使用 data-src 的值
-                    final_pic_url = data_src_value
-                else:
-                    # 否则，使用 src 的值 (即使是 None 也没关系)
-                    final_pic_url = src_value
-
-            vlist.append({
-                'vod_id': i('a').attr('href'),
-                'vod_name': i('a').attr('title'),
-                # 5. 使用经过判断处理的 URL
-                'vod_pic': final_pic_url,
-                'vod_remarks': i('.duration').text(),
-                'style': {'ratio': 1.33, 'type': 'rect'}
-            })
-
-        return vlist
-
-    def getpq(self, path=''):
-        url = f"{self.host}{path}"
-        data = self.fetch(url, headers=self.headers).text
-        try:
-            return pq(data)
-        except Exception as e:
-            print(f"{str(e)}")
-            return pq(data.encode('utf-8'))
-
-    # def getjsdata(self, data):
-    #     vhtml = data("script[type='application/ld+json']").text()
-    #     jst = json.loads(vhtml.split('initials=')[-1][:-1])
-    #     return jst
-
