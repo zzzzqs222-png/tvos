@@ -69,8 +69,9 @@ class Spider(Spider):
         return result
 
     def homeVideoContent(self):
-        data = self.getpq()
-        return {'list': self.getlist(data(".margin-fix .item"))}
+        pass
+        # data = self.getpq()
+        # return {'list': self.getlist(data(".margin-fix .item"))}
 
     def categoryContent(self, tid, pg, filter, extend):
         vdata = []
@@ -97,11 +98,10 @@ class Spider(Spider):
         vod = {
             'vod_name': vn,
             'vod_director': pdtitle,
-            'vod_remarks': 'Xhamster',
+            'vod_remarks': '1231',
             'vod_play_from': 'Xhamster',
             'vod_play_url': ''
         }
-        
         vsource_list = data('#video source')
         c = []
         # 遍历所有 <source> 标签
@@ -148,31 +148,31 @@ class Spider(Spider):
     def localProxy(self, param):
         pass
 
-    def gethost(self):
-        try:
-            response = self.fetch(f'{self.proxy}https://www.fullhd.xxx', headers=self.headers, allow_redirects=False)
-            return response.headers['Location']
-        except Exception as e:
-            print(f"获取主页失败: {str(e)}")
-            return "https://www.fullhd.xxx"
+    # def gethost(self):
+    #     try:
+    #         response = self.fetch(f'{self.proxy}https://www.fullhd.xxx', headers=self.headers, allow_redirects=False)
+    #         return response.headers['Location']
+    #     except Exception as e:
+    #         print(f"获取主页失败: {str(e)}")
+    #         return "https://www.fullhd.xxx"
 
-    def e64(self, text):
-        try:
-            text_bytes = text.encode('utf-8')
-            encoded_bytes = b64encode(text_bytes)
-            return encoded_bytes.decode('utf-8')
-        except Exception as e:
-            print(f"Base64编码错误: {str(e)}")
-            return ""
+    # def e64(self, text):
+    #     try:
+    #         text_bytes = text.encode('utf-8')
+    #         encoded_bytes = b64encode(text_bytes)
+    #         return encoded_bytes.decode('utf-8')
+    #     except Exception as e:
+    #         print(f"Base64编码错误: {str(e)}")
+    #         return ""
 
-    def d64(self, encoded_text):
-        try:
-            encoded_bytes = encoded_text.encode('utf-8')
-            decoded_bytes = b64decode(encoded_bytes)
-            return decoded_bytes.decode('utf-8')
-        except Exception as e:
-            print(f"Base64解码错误: {str(e)}")
-            return ""
+    # def d64(self, encoded_text):
+    #     try:
+    #         encoded_bytes = encoded_text.encode('utf-8')
+    #         decoded_bytes = b64decode(encoded_bytes)
+    #         return decoded_bytes.decode('utf-8')
+    #     except Exception as e:
+    #         print(f"Base64解码错误: {str(e)}")
+    #         return ""
 
 
     def getlist(self, data):
@@ -219,10 +219,11 @@ class Spider(Spider):
             print(f"{str(e)}")
             return pq(data.encode('utf-8'))
 
-    def getjsdata(self, data):
-        vhtml = data("script[type='application/ld+json']").text()
-        jst = json.loads(vhtml.split('initials=')[-1][:-1])
-        return jst
+    # def getjsdata(self, data):
+    #     vhtml = data("script[type='application/ld+json']").text()
+    #     jst = json.loads(vhtml.split('initials=')[-1][:-1])
+    #     return jst
+
 
 
 
