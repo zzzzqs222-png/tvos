@@ -216,18 +216,19 @@ class Spider(Spider):
         return vlist
 
     def getpq(self, path=''):
-        h = '' if path.startswith('http') else self.host
-        response = self.session.get(f'{self.proxy}{h}{path}').text
+        url=f"{self.host}{path}"
+        data=self.fetch(url,headers=self.headers).text
         try:
-            return pq(response)
+            return pq(data)
         except Exception as e:
             print(f"{str(e)}")
-            return pq(response.encode('utf-8'))
+            return pq(data.encode('utf-8'))
 
     def getjsdata(self, data):
         vhtml = data("script[type='application/ld+json']").text()
         jst = json.loads(vhtml.split('initials=')[-1][:-1])
         return jst
+
 
 
 
