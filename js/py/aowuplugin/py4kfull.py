@@ -45,13 +45,21 @@ class Spider(Spider):
 
     def homeContent(self, filter):
         result = {}
-        result = {"class": [{"type_id": "latest-updates", "type_name": "最新视频🌠"},
-                            {"type_id": "top-rated", "type_name": "最佳视频🌠"},
-                            {"type_id": "most-popular", "type_name": "热门影片🌠"}],
-                 }
-
+        cateManual = {
+            "最新视频": "/latest-updates",
+            "最佳视频": "/top-rated",
+            "热门影片": "/most-popular"
+        }
+        classes = []
+        filters = {}
+        for k in cateManual:
+            classes.append({
+                'type_name': k,
+                'type_id': cateManual[k]
+            })
+        result['class'] = classes
+        result['filters'] = filters
         return result
-
 
     def homeVideoContent(self):
         videos = []
@@ -280,4 +288,5 @@ class Spider(Spider):
         elif params['type'] == "ts":
             return self.proxyTs(params)
         return None
+
 
