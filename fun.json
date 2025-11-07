@@ -33,7 +33,6 @@
         	"分类": "麻豆视频$1#中文字幕$2#日本无码$3#日本有码$4#童颜巨乳$5#校园萝莉$6#女优明星$7#角色扮演$8#制服诱惑$9#强奸乱伦$31#AI换脸$32#黑料泄密$33#主播直播$34#国产精品$35#探花视频$36#女同性恋$37#SM调教$38#人妻熟女$40"
         	}
         },
-		
 		{
             "key": "4kfulla",
             "name": "4kfulla",
@@ -41,21 +40,21 @@
             "api": "csp_XBPQ",
             "jar": "./jar/XBPQ.jar",
             "ext": {
-        	"主页url": "https://www.fullhd.xxx/",
+        	"主页url": "https://www.fullhd.xxx/zh/",
         	"直接播放": "1",
         	"嗅探词": "index.m3u8#.mp4#m3u8#.m3u8#/tos/#.flv#video/tos",
         	"数组": "class=\"margin-fix\"&&</div>",
         	"图片": "src=\"&&\"",
         	"标题": "title=\"&&\"",
         	"链接": "href=\"&&\"",
-        	"分类url": "https://www.fullhd.xxx/zh/{cateId}/{catePg}/",
-        	"分类": "麻豆视频$latest-updates#中文字幕$top-rated#日本无码$most-popular#日本有码$4#童颜$5#校园萝莉$6#女优明星$7#角色扮演$8#制服诱惑$9#强奸乱伦$31#AI换脸$32#黑料泄密$33#主播直播$34#国产精品$35#探花视频$36#女同性恋$37#SM调教$38#人妻熟女$40"
 			"状态": "更新："class=\"video-info\"&&</video>",
 			"线路数组": "class=\"video-js\"&&</div>",
             "线路标题": "label=\"&&\"",
 			"播放数组": "class=\"video-js\"&&</video>",
     		"播放列表": "<source&&>",
-    		"播放链接": "src=\"&&\""
+    		"播放链接": "src=\"&&\"",
+			"分类url": "https://www.fullhd.xxx/zh/{cateId}/{catePg}/",
+        	"分类": "麻豆视频$latest-updates#中文字幕$top-rated#日本无码$most-popular"
         	}
         },
 		{
