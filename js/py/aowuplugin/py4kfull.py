@@ -13,13 +13,6 @@ from base.spider import Spider
 class Spider(Spider):
 
     def init(self, extend=""):
-        self.proxy = ''
-        if extend and json.loads(extend).get('proxy'):
-            self.proxy = json.loads(extend).get('proxy')
-        self.host = self.gethost()
-        self.headers['referer'] = f'{self.host}/'
-        self.session = Session()
-        self.session.headers.update(self.headers)
         pass
 
     def getName(self):
@@ -54,6 +47,8 @@ class Spider(Spider):
         'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8',
         'priority': 'u=0, i'
     }
+
+    host = "https://www.fullhd.xxx"
 
     def homeContent(self, filter):
         result = {}
@@ -228,6 +223,7 @@ class Spider(Spider):
         vhtml = data("script[type='application/ld+json']").text()
         jst = json.loads(vhtml.split('initials=')[-1][:-1])
         return jst
+
 
 
 
