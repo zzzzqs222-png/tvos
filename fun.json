@@ -16,15 +16,15 @@
             "ext": "./js/ss/爱豆.json"
         },
 		{
-            "key": "肉肉",
-            "name": "肉肉",
+            "key": "肉肉1",
+            "name": "肉肉1",
             "type": 3,
             "api": "csp_XBPQ",
             "jar": "./jar/XBPQ.jar",
             "ext": {
 			  "站名": "4kfull",
 			  "主页url": "https://www.fullhd.xxx/",
- 			  "请求头": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Mobile Safari/537.36",
+			  "请求头": "User-Agent$MOBILE_UA",
 			  "分类url": "https://www.fullhd.xxx/{cateId}/{catePg}/",
 			  "分类": "麻豆视频$latest-updates#中文字幕$top-rated#日本无码$most-popular",
 			  "数组": "class=\"margin-fix\"&&</div>",
