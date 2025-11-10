@@ -34,8 +34,8 @@
         	}
         },
 		{
-            "key": "4kfulla",
-            "name": "4kfulla",
+            "key": "4kfullav",
+            "name": "4kfullav",
             "type": 3,
             "api": "csp_XBPQ",
             "jar": "./jar/XBPQ.jar",
@@ -47,10 +47,10 @@
         	"图片": "src=\"&&\"",
         	"标题": "title=\"&&\"",
         	"链接": "href=\"&&\"",
-			"线路数组": "class=\"video-js\"&&</div>",
+			"线路数组": "<source&&\">",
             "线路标题": "label=\"&&\"",
-			"播放数组": "class=\"video-js\"&&</video>",
-    		"播放列表": "<source&&>",
+			"播放数组": "<source&&\">",
+    		"播放列表": "<source&&type",
     		"播放链接": "src=\"&&\"",
 			"分类url": "https://www.fullhd.xxx/zh/{cateId}/{catePg}/",
         	"分类": "麻豆视频$latest-updates#中文字幕$top-rated#日本无码$most-popular"
