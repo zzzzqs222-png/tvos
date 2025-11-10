@@ -27,6 +27,7 @@
 			  "请求头": "User-Agent$MOBILE_UA",
 			  "分类url": "https://www.fullhd.xxx/{cateId}/{catePg}/",
 			  "分类": "麻豆视频$latest-updates#中文字幕$top-rated#日本无码$most-popular",
+			  "二次截取": "class=\"item\"&&</div>",
 			  "数组": "class=\"margin-fix\"&&</div>",
 			  "图片": "src=\"&&\"",
 			  "标题": "title=\"&&\"",
