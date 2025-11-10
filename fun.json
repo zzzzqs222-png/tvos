@@ -16,8 +16,8 @@
             "ext": "./js/ss/爱豆.json"
         },
 		{
-            "key": "肉肉1",
-            "name": "肉肉1",
+            "key": "肉肉",
+            "name": "肉肉",
             "type": 3,
             "api": "csp_XBPQ",
             "jar": "./jar/XBPQ.jar",
@@ -27,8 +27,8 @@
 			  "请求头": "User-Agent$MOBILE_UA",
 			  "分类url": "https://www.fullhd.xxx/{cateId}/{catePg}/",
 			  "分类": "麻豆视频$latest-updates#中文字幕$top-rated#日本无码$most-popular",
-			  "二次截取": "class=\"item\"&&</div>",
 			  "数组": "class=\"margin-fix\"&&</div>",
+			  "二次截取": "class=\"item\"&&</div>",
 			  "图片": "src=\"&&\"",
 			  "标题": "title=\"&&\"",
 			  "副标题": "class=\"duration\">&&<",
