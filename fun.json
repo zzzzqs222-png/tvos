@@ -34,15 +34,15 @@
         	}
         },
 		{
-            "key": "4kfullav",
-            "name": "4kfullav",
+            "key": "4kfullax",
+            "name": "4kfullax",
             "type": 3,
             "api": "csp_XBPQ",
             "jar": "./jar/XBPQ.jar",
             "ext": {
         	"主页url": "https://www.fullhd.xxx/zh/",
-        	"直接播放": "1",
-        	"嗅探词": "index.m3u8#.mp4#m3u8#.m3u8#/tos/#.flv#video/tos",
+			"分类url": "https://www.fullhd.xxx/zh/{cateId}/{catePg}/",
+        	"分类": "麻豆视频$latest-updates#中文字幕$top-rated#日本无码$most-popular",
         	"数组": "class=\"margin-fix\"&&</div>",
         	"图片": "src=\"&&\"",
         	"标题": "title=\"&&\"",
@@ -51,9 +51,7 @@
             "线路标题": "label=\"&&\"",
 			"播放数组": "<source&&\">",
     		"播放列表": "<source&&type",
-    		"播放链接": "src=\"&&\"",
-			"分类url": "https://www.fullhd.xxx/zh/{cateId}/{catePg}/",
-        	"分类": "麻豆视频$latest-updates#中文字幕$top-rated#日本无码$most-popular"
+    		"播放链接": "src=\"&&\""
         	}
         },
 		{
