@@ -28,7 +28,7 @@
 			  "分类url": "https://www.fullhd.xxx/{cateId}/{catePg}/",
 			  "分类": "麻豆视频$latest-updates#中文字幕$top-rated#日本无码$most-popular",
 			  "数组": "class=\"item\"&&</div>",
-			  "图片": "src=\"&&\"",
+			  "图片": "data-src=\"&&\"",
 			  "标题": "title=\"&&\"",
 			  "副标题": "class=\"duration\">&&<",
 			  "链接": "href=\"&&\"",
