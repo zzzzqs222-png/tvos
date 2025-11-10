@@ -34,8 +34,8 @@
         	}
         },
 		{
-            "key": "4kfullazq",
-            "name": "4kfullazq",
+            "key": "4kfulla",
+            "name": "4kfulla",
             "type": 3,
             "api": "csp_XBPQ",
             "jar": "./jar/XBPQ.jar",
@@ -46,9 +46,10 @@
         	"数组": "class=\"margin-fix\"&&</div>",
         	"图片": "src=\"&&\"",
         	"标题": "title=\"&&\"",
-        	"链接": "<source src=\"&&\";;m",
+        	"链接": "href=\"&&\"",
 			"线路数组": "<video id&&</video>",
             "线路标题": "label=\"&&\""
+			"播放链接": "<source src=\"&&\";;m",
         	}
         },
 		{
