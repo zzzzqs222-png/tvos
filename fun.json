@@ -1,11 +1,10 @@
 {
 	"sites": [
 		{
-			"key": "精品资源站",
-			"name": "精品资源",
+			"key": "精品站",
+			"name": "精品资源站",
 			"type": 1,
-			"api": "https://www.jingpinx.com/api.php/provide/vod/",
-			"ext": "proxy"
+			"api": "https://www.jingpinx.com/api.php/provide/vod/"
 		},
 		{
             "key": "爱豆",
