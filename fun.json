@@ -22,7 +22,7 @@
             "api": "csp_XBPQ",
             "jar": "./jar/XBPQ.jar",
             "ext": {
-			  "proxy"$$$"站名": "韩迷",
+			  "站名": "韩迷",
 			  "主页url": "https://hanime1.me/",
 			  "编码": "UTF-8",
 			  "请求头": "User-Agent$MOBILE_UA",
