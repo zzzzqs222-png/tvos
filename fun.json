@@ -22,6 +22,7 @@
             "api": "csp_XBPQ",
             "jar": "./jar/XBPQ.jar",
             "ext": {
+			  "proxy": "proxy",
 			  "站名": "韩迷",
 			  "主页url": "https://hanime1.me/",
 			  "编码": "UTF-8",
@@ -1142,6 +1143,7 @@
 			"hosts": [
 				"raw.githubusercontent.com",
 				"googlevideo.com",
+				"hanime1.me",
 				"cdn.v82u1l.com",
 				"cdn.iz8qkg.com",
 				"cdn.kin6c1.com",
