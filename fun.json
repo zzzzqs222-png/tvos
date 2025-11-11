@@ -16,8 +16,8 @@
             "ext": "./js/ss/爱豆.json"
         },
 		{
-            "key": "韩迷1",
-            "name": "韩迷1",
+            "key": "韩迷",
+            "name": "韩迷",
             "type": 3,
             "api": "csp_XBPQ",
             "jar": "./jar/XBPQ.jar",
