@@ -47,14 +47,25 @@
             "api": "csp_XBPQ",
             "jar": "./jar/XBPQ.jar",
             "ext": {
-        	"主页url": "https://www.fullhd.xxx/zh/",
-			"分类url": "https://www.fullhd.xxx/zh/{cateId}/{catePg}/",
-        	"分类": "麻豆视频$latest-updates#中文字幕$top-rated#日本无码$most-popular",
-        	"数组": "class=\"margin-fix\"&&</div>",
-        	"图片": "src=\"&&\"",
-        	"标题": "title=\"&&\"",
-        	"链接": "href=\"&&\""
-        	}
+			  "站名": "4kfull",
+			  "主页url": "https://www.fullhd.xxx/zh/categories/",
+			  "请求头": "User-Agent$MOBILE_UA",
+			  "分类url": "https://www.fullhd.xxx/zh/categories/{cateId}/{catePg}/",
+			  "分类数组": "<a class=\"item\"&&</a>",
+			  "分类标题": "title=\"&&\"",
+			  "分类ID": "categories/&&/\" title",
+			  "数组": "class=\"item\"&&</div>",
+			  "图片": "data-src=\"&&\"",
+			  "标题": "title=\"&&\"",
+			  "副标题": "class=\"duration\">&&<",
+			  "链接": "href=\"&&\"",
+			  "播放数组": "class=\"player-wrap__wrap\"&&</div>",
+			  "播放列表": "data-setup='{}'>&&' type",
+			  "播放标题": "2160",
+			  "播放链接": "src=\"&&\"",
+			  "搜索url": "https://www.fullhd.xxx/zh/search/{wd}/",
+			  "搜索模式": "1"
+			}
         },
 		{
       		"key": "py4kfull",
