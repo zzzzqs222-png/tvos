@@ -41,14 +41,13 @@
 			}
         },
 		{
-            "key": "4kfulla",
-            "name": "4kfulla",
+            "key": "4kfullaz",
+            "name": "4kfullaz",
             "type": 3,
             "api": "csp_XBPQ",
             "jar": "./jar/XBPQ.jar",
             "ext": {
-			  "站名": "4kfull",
-			  "主页url": "https://www.fullhd.xxx/zh/categories/",
+			  "站名": "4kfull1",
 			  "请求头": "User-Agent$MOBILE_UA",
 			  "分类url": "https://www.fullhd.xxx/zh/categories/{cateId}/{catePg}/",
 			  "分类数组": "<a class=\"item\"&&</a>",
