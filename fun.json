@@ -41,8 +41,8 @@
 			}
         },
 		{
-            "key": "4kfullaz",
-            "name": "4kfullaz",
+            "key": "4kfulla",
+            "name": "4kfulla",
             "type": 3,
             "api": "csp_XBPQ",
             "jar": "./jar/XBPQ.jar",
