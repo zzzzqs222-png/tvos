@@ -16,25 +16,6 @@
             "ext": "./js/ss/爱豆.json"
         },
 		{
-            "key": "韩迷1",
-            "name": "韩迷1",
-            "type": 3,
-            "api": "csp_XBPQ",
-            "jar": "./jar/XBPQ.jar",
-            "ext": {
-			  "站名": "韩迷",
-			  "主页url": "https://hanime1.me/",
-			  "编码": "UTF-8",
-			  "请求头": "User-Agent$MOBILE_UA",
-			  "分类url": "https://hanime1.me/search?genre={cateId}&page={catePg}",
-			  "分类": "里番$裏番#泡面番$泡麵番#Motion Anime$Motion Anime#3D动画$3D動畫#同人作品$同人作品#MMD$MMD#Cosplay$Cosplay",
-			  "数组": "class=\"home-rows-videos-div search-videos\"&&</div>",
-			  "图片": "src=\"&&\">",
-			  "标题": ">&&</div>",
-			  "链接": "href=\"&&\""
-			}
-        },
-		{
             "key": "肉肉",
             "name": "肉肉",
             "type": 3,
