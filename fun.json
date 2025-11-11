@@ -16,13 +16,12 @@
             "ext": "./js/ss/爱豆.json"
         },
 		{
-            "key": "韩迷1",
-            "name": "韩迷1",
+            "key": "韩迷",
+            "name": "韩迷",
             "type": 3,
             "api": "csp_XBPQ",
             "jar": "./jar/XBPQ.jar",
             "ext": {
-			  "代理": "proxy",
 			  "站名": "韩迷",
 			  "主页url": "https://hanime1.me/",
 			  "编码": "UTF-8",
@@ -1115,6 +1114,7 @@
 	],
 	"proxy": [
 		"raw.githubusercontent.com",
+		"hanime1.me",
 		"googlevideo.com",
 		"cdn.v82u1l.com",
 		"cdn.iz8qkg.com",
