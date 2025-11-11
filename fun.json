@@ -16,13 +16,15 @@
             "ext": "./js/ss/爱豆.json"
         },
 		{
-            "key": "韩迷",
-            "name": "韩迷",
+            "key": "韩迷1",
+            "name": "韩迷1",
             "type": 3,
             "api": "csp_XBPQ",
             "jar": "./jar/XBPQ.jar",
             "ext": {
-			  "proxy": "proxy",
+						{
+						"proxy": "proxy"
+							},
 			  "站名": "韩迷",
 			  "主页url": "https://hanime1.me/",
 			  "编码": "UTF-8",
