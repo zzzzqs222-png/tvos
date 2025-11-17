@@ -22,8 +22,7 @@
             "jar": "./jar/XBPQ.jar",
             "ext": {
         "主页url": "https://www.51155.cc/",
-        "直接播放": "1",
-        "嗅探词": "index.m3u8#.mp4#m3u8#.m3u8#/tos/#.flv#video/tos",
+		"请求头": "User-Agent$MOBILE_UA",
         "数组": "class=\"myui-vodlist__box\">&&</div>",
         "图片": "data-original=\"&&\"",
         "标题": "title=\"&&\"",
