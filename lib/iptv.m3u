@@ -243,7 +243,7 @@ http://218.13.14.6:60050/tsfile/live/1004_1.m3u8$LR•IPV4•39『线路19』
 #EXTINF:-1 tvg-id="20" tvg-name="CCTV4中文国际" group-title="央视频道",CCTV4中文国际
 http://58.57.40.22:9901/tsfile/live/1003_1.m3u8$LR•IPV4•39『线路20』
 #EXTINF:-1 tvg-id="21" tvg-name="CCTV4中文国际" group-title="央视频道",CCTV4中文国际
-https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4_mbd.m3u8?auth_key=1764716400-1-b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c-ab693dbaeda5bf9947263af7b53d0a1f&yid=b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c$LR•IPV4•39『线路21』
+https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4_mbd.m3u8?auth_key=1764720000-1-b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c-5d531cf8894d08cfb297d8b5cec3ddab&yid=b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c$LR•IPV4•39『线路21』
 #EXTINF:-1 tvg-id="22" tvg-name="CCTV4中文国际" group-title="央视频道",CCTV4中文国际
 http://iptv.huuc.edu.cn/hls/cctv4hd.m3u8$LR•IPV4•39『线路22』
 #EXTINF:-1 tvg-id="23" tvg-name="CCTV4中文国际" group-title="央视频道",CCTV4中文国际
@@ -1745,7 +1745,7 @@ http://58.57.40.22:9901/tsfile/live/1029_1.m3u8$LR•IPV4•76『线路54』
 #EXTINF:-1 tvg-id="55" tvg-name="浙江卫视" group-title="卫视频道",浙江卫视
 http://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8$LR•IPV4•76『线路55』
 #EXTINF:-1 tvg-id="56" tvg-name="浙江卫视" group-title="卫视频道",浙江卫视
-http://zwebl02.cztv.com/live/channel01720Pnew.m3u8?auth_key=1764662678-556abe9a61002861bfbb6c19609ec924-0-6f7c3261d056ce071071a76f56bf14b4$LR•IPV4•76『线路56』
+http://zwebl02.cztv.com/live/channel01720Pnew.m3u8?auth_key=1764666315-735ab262d430658329615833943724c9-0-f13596b22fb10974f78686316376d808$LR•IPV4•76『线路56』
 #EXTINF:-1 tvg-id="57" tvg-name="浙江卫视" group-title="卫视频道",浙江卫视
 http://pull-skycorp.speedws.com/live/gbH4PLQ3sx9tsENsNRHYN0fXCkRq5E1sVCiXPZPoRHSwF6qIbcq.flv$LR•IPV4•76『线路57』
 #EXTINF:-1 tvg-id="58" tvg-name="浙江卫视" group-title="卫视频道",浙江卫视
@@ -2243,7 +2243,7 @@ http://36.32.174.67:60080/newlive/live/hls/34/live.m3u8$LR•IPV4•50『线路3
 #EXTINF:-1 tvg-id="33" tvg-name="重庆卫视" group-title="卫视频道",重庆卫视
 http://220.192.12.20:8003/udp/225.0.4.187:7980?$LR•IPV4•50『线路33』
 #EXTINF:-1 tvg-id="34" tvg-name="重庆卫视" group-title="卫视频道",重庆卫视
-http://p2.ytelc.com/videojs.php?id=https://sjlivecdn9.cbg.cn/202512021414/app_2/_definst_/ls_2.stream/chunklist.m3u8$LR•IPV4•50『线路34』
+http://p2.ytelc.com/videojs.php?id=https://sjlivecdn9.cbg.cn/202512021628/app_2/_definst_/ls_2.stream/chunklist.m3u8$LR•IPV4•50『线路34』
 #EXTINF:-1 tvg-id="35" tvg-name="重庆卫视" group-title="卫视频道",重庆卫视
 http://iptv.huuc.edu.cn/hls/cqhd.m3u8$LR•IPV4•50『线路35』
 #EXTINF:-1 tvg-id="36" tvg-name="重庆卫视" group-title="卫视频道",重庆卫视
@@ -3177,7 +3177,7 @@ http://home.wwang.pw:35455/itv/1000000002000027731.m3u8?cdn=ystenlive$LR•IPV4�
 #EXTINF:-1 tvg-id="27" tvg-name="河南卫视" group-title="卫视频道",河南卫视
 http://39.164.160.249:9901/tsfile/live/0139_1.m3u8$LR•IPV4•47『线路27』
 #EXTINF:-1 tvg-id="28" tvg-name="河南卫视" group-title="卫视频道",河南卫视
-http://tvcdn.stream3.hndt.com/tv/65c4a6d5017e1000b2b6ea2500000000_transios/playlist.m3u8?wsSecret=93032230da552a53bd76060681aa45d8&wsTime=1764676873$LR•IPV4•47『线路28』
+http://tvcdn.stream3.hndt.com/tv/65c4a6d5017e1000b2b6ea2500000000_transios/playlist.m3u8?wsSecret=f64ac55cd87b6dd888e1cca8848bce8f&wsTime=1764680538$LR•IPV4•47『线路28』
 #EXTINF:-1 tvg-id="29" tvg-name="河南卫视" group-title="卫视频道",河南卫视
 http://ygbh.site/php/bfgd.php?id=104$LR•IPV4•47『线路29』
 #EXTINF:-1 tvg-id="30" tvg-name="河南卫视" group-title="卫视频道",河南卫视
