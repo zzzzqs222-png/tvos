@@ -291,7 +291,7 @@ http://218.13.14.6:60050/tsfile/live/1004_1.m3u8$LR•IPV4•57『线路31』
 #EXTINF:-1 tvg-id="32" tvg-name="CCTV4中文国际" group-title="央视频道",CCTV4中文国际
 http://58.57.40.22:9901/tsfile/live/1003_1.m3u8$LR•IPV4•57『线路32』
 #EXTINF:-1 tvg-id="33" tvg-name="CCTV4中文国际" group-title="央视频道",CCTV4中文国际
-https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4_mbd.m3u8?auth_key=1769832000-1-b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c-9d0df08a0a06d8b4c48cd2247d77ff98&yid=b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c$LR•IPV4•57『线路33』
+https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4_mbd.m3u8?auth_key=1769835600-1-b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c-27d93665da3c37da3a2aeb634bfc667a&yid=b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c$LR•IPV4•57『线路33』
 #EXTINF:-1 tvg-id="34" tvg-name="CCTV4中文国际" group-title="央视频道",CCTV4中文国际
 http://iptv.huuc.edu.cn/hls/cctv4hd.m3u8$LR•IPV4•57『线路34』
 #EXTINF:-1 tvg-id="35" tvg-name="CCTV4中文国际" group-title="央视频道",CCTV4中文国际
@@ -945,7 +945,7 @@ http://218.13.14.6:60050/tsfile/live/1009_1.m3u8$LR•IPV4•49『线路20』
 #EXTINF:-1 tvg-id="21" tvg-name="CCTV9纪录" group-title="央视频道",CCTV9纪录
 http://58.57.40.22:9901/tsfile/live/1009_1.m3u8$LR•IPV4•49『线路21』
 #EXTINF:-1 tvg-id="22" tvg-name="CCTV9纪录" group-title="央视频道",CCTV9纪录
-https://v4-702cae17a28d6e4f0c0002bba021d934.livehwc4.com/play.kankanlive.com/live/1698423397390920.m3u8?sub_m3u8=true&edge_slice=true&user_session_id=70a07318f4247d493845465a8a510f78$LR•IPV4•49『线路22』
+https://v4-702cae17a28d6e4f0c0002bba021d934.livehwc4.com/play.kankanlive.com/live/1698423397390920.m3u8?sub_m3u8=true&edge_slice=true&user_session_id=621d89ed49a7f61940a9db8a02d19df3$LR•IPV4•49『线路22』
 #EXTINF:-1 tvg-id="23" tvg-name="CCTV9纪录" group-title="央视频道",CCTV9纪录
 http://iptv.huuc.edu.cn/hls/cctv9hd.m3u8$LR•IPV4•49『线路23』
 #EXTINF:-1 tvg-id="24" tvg-name="CCTV9纪录" group-title="央视频道",CCTV9纪录
@@ -5615,39 +5615,39 @@ https://stream1.freetv.fun/yan-dong-zhu-jiang-4.ctv$LR•IPV4•28『线路10』
 #EXTINF:-1 tvg-id="11" tvg-name="广东珠江" group-title="广东频道",广东珠江
 https://stream1.freetv.fun/yan-dong-zhu-jiang-18.ctv$LR•IPV4•28『线路11』
 #EXTINF:-1 tvg-id="12" tvg-name="广东珠江" group-title="广东频道",广东珠江
-http://r.jdshipin.com/sE5vO$LR•IPV4•28『线路12』
+http://bxtv.3a.ink/api.php?id=gdzj$LR•IPV4•28『线路12』
 #EXTINF:-1 tvg-id="13" tvg-name="广东珠江" group-title="广东频道",广东珠江
-http://cdn2.163189.xyz/live/gdzj/stream.m3u8$LR•IPV4•28『线路13』
+http://r.jdshipin.com/sE5vO$LR•IPV4•28『线路13』
 #EXTINF:-1 tvg-id="14" tvg-name="广东珠江" group-title="广东频道",广东珠江
-http://120.238.94.10:9901/tsfile/live/1009_1.m3u8$LR•IPV4•28『线路14』
+http://cdn2.163189.xyz/live/gdzj/stream.m3u8$LR•IPV4•28『线路14』
 #EXTINF:-1 tvg-id="15" tvg-name="广东珠江" group-title="广东频道",广东珠江
-http://gmxw.7766.org:808/hls/83/index.m3u8$LR•IPV4•28『线路15』
+http://120.238.94.10:9901/tsfile/live/1009_1.m3u8$LR•IPV4•28『线路15』
 #EXTINF:-1 tvg-id="16" tvg-name="广东珠江" group-title="广东频道",广东珠江
-http://183.11.239.36:808/hls/83/index.m3u8$LR•IPV4•28『线路16』
+http://gmxw.7766.org:808/hls/83/index.m3u8$LR•IPV4•28『线路16』
 #EXTINF:-1 tvg-id="17" tvg-name="广东珠江" group-title="广东频道",广东珠江
-http://r.jdshipin.com/sE5vO$LR•IPV4•28『线路17』
+http://183.11.239.36:808/hls/83/index.m3u8$LR•IPV4•28『线路17』
 #EXTINF:-1 tvg-id="18" tvg-name="广东珠江" group-title="广东频道",广东珠江
-http://cdn2.163189.xyz/live/gdzj/stream.m3u8$LR•IPV4•28『线路18』
+http://r.jdshipin.com/sE5vO$LR•IPV4•28『线路18』
 #EXTINF:-1 tvg-id="19" tvg-name="广东珠江" group-title="广东频道",广东珠江
-https://hk.188766.xyz/?migutoken=34467290b64f0850801479159893a4de&id=gd_gdzj&type=sz$LR•IPV4•28『线路19』
+http://cdn2.163189.xyz/live/gdzj/stream.m3u8$LR•IPV4•28『线路19』
 #EXTINF:-1 tvg-id="20" tvg-name="广东珠江" group-title="广东频道",广东珠江
-http://lu.wqwqwq.sbs/itv/2000000003000000033.m3u8?cdn=hnbblive$LR•IPV4•28『线路20』
+https://hk.188766.xyz/?migutoken=34467290b64f0850801479159893a4de&id=gd_gdzj&type=sz$LR•IPV4•28『线路20』
 #EXTINF:-1 tvg-id="21" tvg-name="广东珠江" group-title="广东频道",广东珠江
-https://stream1.freetv.fun/yan-dong-zhu-jiang-16.ctv$LR•IPV4•28『线路21』
+http://lu.wqwqwq.sbs/itv/2000000003000000033.m3u8?cdn=hnbblive$LR•IPV4•28『线路21』
 #EXTINF:-1 tvg-id="22" tvg-name="广东珠江" group-title="广东频道",广东珠江
-https://stream1.freetv.fun/yan-dong-zhu-jiang-4.ctv$LR•IPV4•28『线路22』
+https://stream1.freetv.fun/yan-dong-zhu-jiang-16.ctv$LR•IPV4•28『线路22』
 #EXTINF:-1 tvg-id="23" tvg-name="广东珠江" group-title="广东频道",广东珠江
-https://stream1.freetv.fun/yan-dong-zhu-jiang-18.ctv$LR•IPV4•28『线路23』
+https://stream1.freetv.fun/yan-dong-zhu-jiang-4.ctv$LR•IPV4•28『线路23』
 #EXTINF:-1 tvg-id="24" tvg-name="广东珠江" group-title="广东频道",广东珠江
-https://stream1.freetv.fun/yan-dong-zhu-jiang-19.ctv$LR•IPV4•28『线路24』
+https://stream1.freetv.fun/yan-dong-zhu-jiang-18.ctv$LR•IPV4•28『线路24』
 #EXTINF:-1 tvg-id="25" tvg-name="广东珠江" group-title="广东频道",广东珠江
-https://stream1.freetv.fun/yan-dong-zhu-jiang-12.ctv$LR•IPV4•28『线路25』
+https://stream1.freetv.fun/yan-dong-zhu-jiang-19.ctv$LR•IPV4•28『线路25』
 #EXTINF:-1 tvg-id="26" tvg-name="广东珠江" group-title="广东频道",广东珠江
-https://stream1.freetv.fun/yan-dong-zhu-jiang-29.ctv$LR•IPV4•28『线路26』
+https://stream1.freetv.fun/yan-dong-zhu-jiang-12.ctv$LR•IPV4•28『线路26』
 #EXTINF:-1 tvg-id="27" tvg-name="广东珠江" group-title="广东频道",广东珠江
-http://cdn2.163189.xyz/live/gdzj/stream.m3u8$LR•IPV4•28『线路27』
+https://stream1.freetv.fun/yan-dong-zhu-jiang-29.ctv$LR•IPV4•28『线路27』
 #EXTINF:-1 tvg-id="28" tvg-name="广东珠江" group-title="广东频道",广东珠江
-http://bxtv.3a.ink/api.php?id=gdzj$LR•IPV4•28『线路28』
+http://cdn2.163189.xyz/live/gdzj/stream.m3u8$LR•IPV4•28『线路28』
 #EXTINF:-1 tvg-id="1" tvg-name="广东体育" group-title="广东频道",广东体育
 http://cdn2.132.us.kg/live/gdty/stream.m3u8$LR•IPV4•38『线路1』
 #EXTINF:-1 tvg-id="2" tvg-name="广东体育" group-title="广东频道",广东体育
@@ -5673,37 +5673,37 @@ https://stream1.freetv.fun/yan-dong-ti-yu-16.m3u8$LR•IPV4•38『线路11』
 #EXTINF:-1 tvg-id="12" tvg-name="广东体育" group-title="广东频道",广东体育
 https://stream1.freetv.fun/yan-dong-ti-yu-17.ctv$LR•IPV4•38『线路12』
 #EXTINF:-1 tvg-id="13" tvg-name="广东体育" group-title="广东频道",广东体育
-http://r.jdshipin.com/LiYdg$LR•IPV4•38『线路13』
+http://bxtv.3a.ink/api.php?id=gdty$LR•IPV4•38『线路13』
 #EXTINF:-1 tvg-id="14" tvg-name="广东体育" group-title="广东频道",广东体育
-http://cdn2.163189.xyz/live/gdty/stream.m3u8$LR•IPV4•38『线路14』
+http://r.jdshipin.com/LiYdg$LR•IPV4•38『线路14』
 #EXTINF:-1 tvg-id="15" tvg-name="广东体育" group-title="广东频道",广东体育
-http://120.238.94.10:9901/tsfile/live/1012_1.m3u8$LR•IPV4•38『线路15』
+http://cdn2.163189.xyz/live/gdty/stream.m3u8$LR•IPV4•38『线路15』
 #EXTINF:-1 tvg-id="16" tvg-name="广东体育" group-title="广东频道",广东体育
-http://r.jdshipin.com/LiYdg$LR•IPV4•38『线路16』
+http://120.238.94.10:9901/tsfile/live/1012_1.m3u8$LR•IPV4•38『线路16』
 #EXTINF:-1 tvg-id="17" tvg-name="广东体育" group-title="广东频道",广东体育
-http://cdn2.163189.xyz/live/gdty/stream.m3u8$LR•IPV4•38『线路17』
+http://r.jdshipin.com/LiYdg$LR•IPV4•38『线路17』
 #EXTINF:-1 tvg-id="18" tvg-name="广东体育" group-title="广东频道",广东体育
-https://epg.pw/stream/7b470f9fc5c305db0c8622117b7b25ca00eb35ba3e93e865cf0ff9df5c736681.m3u8$LR•IPV4•38『线路18』
+http://cdn2.163189.xyz/live/gdty/stream.m3u8$LR•IPV4•38『线路18』
 #EXTINF:-1 tvg-id="19" tvg-name="广东体育" group-title="广东频道",广东体育
-http://php.jdshipin.com/PLTV/iptv.php?id=gdty$LR•IPV4•38『线路19』
+https://epg.pw/stream/7b470f9fc5c305db0c8622117b7b25ca00eb35ba3e93e865cf0ff9df5c736681.m3u8$LR•IPV4•38『线路19』
 #EXTINF:-1 tvg-id="20" tvg-name="广东体育" group-title="广东频道",广东体育
-http://php.jdshipin.com/TVOD/iptv.php?id=gdty$LR•IPV4•38『线路20』
+http://php.jdshipin.com/PLTV/iptv.php?id=gdty$LR•IPV4•38『线路20』
 #EXTINF:-1 tvg-id="21" tvg-name="广东体育" group-title="广东频道",广东体育
-https://stream1.freetv.fun/yan-dong-ti-yu-10.ctv$LR•IPV4•38『线路21』
+http://php.jdshipin.com/TVOD/iptv.php?id=gdty$LR•IPV4•38『线路21』
 #EXTINF:-1 tvg-id="22" tvg-name="广东体育" group-title="广东频道",广东体育
-https://stream1.freetv.fun/yan-dong-ti-yu-11.ctv$LR•IPV4•38『线路22』
+https://stream1.freetv.fun/yan-dong-ti-yu-10.ctv$LR•IPV4•38『线路22』
 #EXTINF:-1 tvg-id="23" tvg-name="广东体育" group-title="广东频道",广东体育
-https://stream1.freetv.fun/yan-dong-ti-yu-14.ctv$LR•IPV4•38『线路23』
+https://stream1.freetv.fun/yan-dong-ti-yu-11.ctv$LR•IPV4•38『线路23』
 #EXTINF:-1 tvg-id="24" tvg-name="广东体育" group-title="广东频道",广东体育
-https://stream1.freetv.fun/yan-dong-ti-yu-16.m3u8$LR•IPV4•38『线路24』
+https://stream1.freetv.fun/yan-dong-ti-yu-14.ctv$LR•IPV4•38『线路24』
 #EXTINF:-1 tvg-id="25" tvg-name="广东体育" group-title="广东频道",广东体育
-https://stream1.freetv.fun/yan-dong-ti-yu-17.ctv$LR•IPV4•38『线路25』
+https://stream1.freetv.fun/yan-dong-ti-yu-16.m3u8$LR•IPV4•38『线路25』
 #EXTINF:-1 tvg-id="26" tvg-name="广东体育" group-title="广东频道",广东体育
-http://120.238.94.10:9901/tsfile/live/1012_1.m3u8$LR•IPV4•38『线路26』
+https://stream1.freetv.fun/yan-dong-ti-yu-17.ctv$LR•IPV4•38『线路26』
 #EXTINF:-1 tvg-id="27" tvg-name="广东体育" group-title="广东频道",广东体育
-http://cdn2.132.us.kg/live/gdty/stream.m3u8$LR•IPV4•38『线路27』
+http://120.238.94.10:9901/tsfile/live/1012_1.m3u8$LR•IPV4•38『线路27』
 #EXTINF:-1 tvg-id="28" tvg-name="广东体育" group-title="广东频道",广东体育
-http://bxtv.3a.ink/api.php?id=gdty$LR•IPV4•38『线路28』
+http://cdn2.132.us.kg/live/gdty/stream.m3u8$LR•IPV4•38『线路28』
 #EXTINF:-1 tvg-id="29" tvg-name="广东体育" group-title="广东频道",广东体育
 http://r.jdshipin.com/LiYdg$LR•IPV4•38『线路29』
 #EXTINF:-1 tvg-id="30" tvg-name="广东体育" group-title="广东频道",广东体育
@@ -7895,35 +7895,35 @@ http://r.jdshipin.com/GeWKr$LR•IPV4•41『线路10』
 #EXTINF:-1 tvg-id="11" tvg-name="翡翠" group-title="港·澳·台",翡翠
 http://fm1077.serv00.net/Smart.php?id=jade_twn$LR•IPV4•41『线路11』
 #EXTINF:-1 tvg-id="12" tvg-name="翡翠" group-title="港·澳·台",翡翠
-http://101.35.240.114:88/live.php?id=翡翠台$LR•IPV4•41『线路12』
+http://bxtv.3a.ink/api.php?id=fct$LR•IPV4•41『线路12』
 #EXTINF:-1 tvg-id="13" tvg-name="翡翠" group-title="港·澳·台",翡翠
-http://bxtv.3a.ink/api.php?id=fct$LR•IPV4•41『线路13』
+http://101.35.240.114:88/live.php?id=翡翠台$LR•IPV4•41『线路13』
 #EXTINF:-1 tvg-id="14" tvg-name="翡翠" group-title="港·澳·台",翡翠
-http://r.jdshipin.com/qClQf$LR•IPV4•41『线路14』
+http://bxtv.3a.ink/api.php?id=fct$LR•IPV4•41『线路14』
 #EXTINF:-1 tvg-id="15" tvg-name="翡翠" group-title="港·澳·台",翡翠
-http://r.jdshipin.com/qrfbg$LR•IPV4•41『线路15』
+http://r.jdshipin.com/qClQf$LR•IPV4•41『线路15』
 #EXTINF:-1 tvg-id="16" tvg-name="翡翠" group-title="港·澳·台",翡翠
-http://r.jdshipin.com/62WM7$LR•IPV4•41『线路16』
+http://r.jdshipin.com/qrfbg$LR•IPV4•41『线路16』
 #EXTINF:-1 tvg-id="17" tvg-name="翡翠" group-title="港·澳·台",翡翠
-http://r.jdshipin.com/n90gt$LR•IPV4•41『线路17』
+http://r.jdshipin.com/62WM7$LR•IPV4•41『线路17』
 #EXTINF:-1 tvg-id="18" tvg-name="翡翠" group-title="港·澳·台",翡翠
-http://r.jdshipin.com/GeWKr$LR•IPV4•41『线路18』
+http://r.jdshipin.com/n90gt$LR•IPV4•41『线路18』
 #EXTINF:-1 tvg-id="19" tvg-name="翡翠" group-title="港·澳·台",翡翠
-http://api.kkitv.itv888.vip:8080/streams/91wc8xdtj8/index.m3u8$LR•IPV4•41『线路19』
+http://r.jdshipin.com/GeWKr$LR•IPV4•41『线路19』
 #EXTINF:-1 tvg-id="20" tvg-name="翡翠" group-title="港·澳·台",翡翠
-http://iptv.4666888.xyz/iptv2A.php?id=34$LR•IPV4•41『线路20』
+http://api.kkitv.itv888.vip:8080/streams/91wc8xdtj8/index.m3u8$LR•IPV4•41『线路20』
 #EXTINF:-1 tvg-id="21" tvg-name="翡翠" group-title="港·澳·台",翡翠
-http://cdn9.163189.xyz/smt1.1.php?id=jade_twn$LR•IPV4•41『线路21』
+http://iptv.4666888.xyz/iptv2A.php?id=34$LR•IPV4•41『线路21』
 #EXTINF:-1 tvg-id="22" tvg-name="翡翠" group-title="港·澳·台",翡翠
-http://php.jdshipin.com:8880/TVOD/iptv.php?id=fct4$LR•IPV4•41『线路22』
+http://cdn9.163189.xyz/smt1.1.php?id=jade_twn$LR•IPV4•41『线路22』
 #EXTINF:-1 tvg-id="23" tvg-name="翡翠" group-title="港·澳·台",翡翠
-http://php.jdshipin.com:8880/smt.php?id=jade_twn$LR•IPV4•41『线路23』
+http://php.jdshipin.com:8880/TVOD/iptv.php?id=fct4$LR•IPV4•41『线路23』
 #EXTINF:-1 tvg-id="24" tvg-name="翡翠" group-title="港·澳·台",翡翠
-http://php.jdshipin.com:8880/TVOD/iptv.php?id=fct4$LR•IPV4•41『线路24』
+http://php.jdshipin.com:8880/smt.php?id=jade_twn$LR•IPV4•41『线路24』
 #EXTINF:-1 tvg-id="25" tvg-name="翡翠" group-title="港·澳·台",翡翠
-http://aktv-stream.m16tv.cfd/stream/aktv/null/AKTV.m3u8$LR•IPV4•41『线路25』
+http://php.jdshipin.com:8880/TVOD/iptv.php?id=fct4$LR•IPV4•41『线路25』
 #EXTINF:-1 tvg-id="26" tvg-name="翡翠" group-title="港·澳·台",翡翠
-http://bxtv.3a.ink/api.php?id=fct$LR•IPV4•41『线路26』
+http://aktv-stream.m16tv.cfd/stream/aktv/null/AKTV.m3u8$LR•IPV4•41『线路26』
 #EXTINF:-1 tvg-id="27" tvg-name="翡翠" group-title="港·澳·台",翡翠
 http://rihou.cc:555/tv/[PL]无线翡4k$LR•IPV4•41『线路27』
 #EXTINF:-1 tvg-id="28" tvg-name="翡翠" group-title="港·澳·台",翡翠
@@ -7977,23 +7977,23 @@ https://mgev.188766.xyz/?migutoken=aa134813480b0241f3fbc8bd320c1104&id=hk_mzt&ty
 #EXTINF:-1 tvg-id="11" tvg-name="明珠" group-title="港·澳·台",明珠
 http://bxtv.3a.ink/api.php?id=mz$LR•IPV4•30『线路11』
 #EXTINF:-1 tvg-id="12" tvg-name="明珠" group-title="港·澳·台",明珠
-http://r.jdshipin.com/ZQ4kN$LR•IPV4•30『线路12』
+http://bxtv.3a.ink/api.php?id=mz$LR•IPV4•30『线路12』
 #EXTINF:-1 tvg-id="13" tvg-name="明珠" group-title="港·澳·台",明珠
-http://r.jdshipin.com/jUx8K$LR•IPV4•30『线路13』
+http://r.jdshipin.com/ZQ4kN$LR•IPV4•30『线路13』
 #EXTINF:-1 tvg-id="14" tvg-name="明珠" group-title="港·澳·台",明珠
-http://api.kkitv.itv888.vip:8080/streams/qi0oiujn7hh/index.m3u8$LR•IPV4•30『线路14』
+http://r.jdshipin.com/jUx8K$LR•IPV4•30『线路14』
 #EXTINF:-1 tvg-id="15" tvg-name="明珠" group-title="港·澳·台",明珠
-http://iptv.4666888.xyz/iptv2A.php?id=29$LR•IPV4•30『线路15』
+http://api.kkitv.itv888.vip:8080/streams/qi0oiujn7hh/index.m3u8$LR•IPV4•30『线路15』
 #EXTINF:-1 tvg-id="16" tvg-name="明珠" group-title="港·澳·台",明珠
-http://cdn9.163189.xyz/smt1.1.php?id=pearl_twn$LR•IPV4•30『线路16』
+http://iptv.4666888.xyz/iptv2A.php?id=29$LR•IPV4•30『线路16』
 #EXTINF:-1 tvg-id="17" tvg-name="明珠" group-title="港·澳·台",明珠
-http://php.jdshipin.com/TVOD/iptv.php?id=mzt2$LR•IPV4•30『线路17』
+http://cdn9.163189.xyz/smt1.1.php?id=pearl_twn$LR•IPV4•30『线路17』
 #EXTINF:-1 tvg-id="18" tvg-name="明珠" group-title="港·澳·台",明珠
-http://php.jdshipin.com/TVOD/iptv.php?id=mzt$LR•IPV4•30『线路18』
+http://php.jdshipin.com/TVOD/iptv.php?id=mzt2$LR•IPV4•30『线路18』
 #EXTINF:-1 tvg-id="19" tvg-name="明珠" group-title="港·澳·台",明珠
-http://aktv-stream.m16tv.cfd/stream/aktv/null-2/AKTV.m3u8$LR•IPV4•30『线路19』
+http://php.jdshipin.com/TVOD/iptv.php?id=mzt$LR•IPV4•30『线路19』
 #EXTINF:-1 tvg-id="20" tvg-name="明珠" group-title="港·澳·台",明珠
-http://bxtv.3a.ink/api.php?id=mz$LR•IPV4•30『线路20』
+http://aktv-stream.m16tv.cfd/stream/aktv/null-2/AKTV.m3u8$LR•IPV4•30『线路20』
 #EXTINF:-1 tvg-id="21" tvg-name="明珠" group-title="港·澳·台",明珠
 http://r.jdshipin.com/ZQ4kN$LR•IPV4•30『线路21』
 #EXTINF:-1 tvg-id="22" tvg-name="明珠" group-title="港·澳·台",明珠
