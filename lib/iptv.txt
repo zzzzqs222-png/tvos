@@ -888,7 +888,7 @@ CGTN阿语,https://0472.org/hls/cgtna.m3u8$LR•IPV4•4『线路4』
 北京卫视,http://43.152.25.217:80/tencent.live.cbncdn.cn/__cl/cg:live/__c/beijingHD/__op/default/__f/index.m3u8$LR•IPV4•40『线路22』
 北京卫视,http://101.35.240.114:88/live.php?id=北京卫视$LR•IPV4•40『线路23』
 北京卫视,http://[2409:8087:1:20:20::2c]/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226436/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7ElMQ3ov45VmhzipweN5VstQ%7E_eNUbgU9sJGUcVVduOMKhafLvQUgE_zlz_7pvDimJNPg_yZ8DZHTaSU92MIl_o3b%2CEND$LR•IPV6•40『线路24』
-北京卫视,http://23.237.228.134/live3/beijing.m3u8$LR•IPV4•40『线路25』
+北京卫视,http://58.57.40.22:9901/tsfile/live/1032_1.m3u8$LR•IPV4•40『线路25』
 北京卫视,http://iptv.huuc.edu.cn/hls/btv1hd.m3u8$LR•IPV4•40『线路26』
 北京卫视,http://112.27.235.94:8000/hls/27/index.m3u8$LR•IPV4•40『线路27』
 北京卫视,http://39.135.135.11/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225728/index.m3u8$LR•IPV4•40『线路28』
@@ -1903,7 +1903,7 @@ CGTN阿语,https://0472.org/hls/cgtna.m3u8$LR•IPV4•4『线路4』
 海南卫视,http://120.76.248.139/live/bfgd/4200000473.m3u8$LR•IPV4•53『线路34』
 海南卫视,http://nn.7x9d.cn/地方台8563/海南.php?id=hnws$LR•IPV4•53『线路35』
 海南卫视,http://home.wwang.pw:35455/itv/5000000004000006211.m3u8?cdn=bestzb$LR•IPV4•53『线路36』
-海南卫视,http://120.76.248.139/live/bfgd/4200000473.m3u8$LR•IPV4•53『线路37』
+海南卫视,http://58.57.40.22:9901/tsfile/live/1000_1.m3u8$LR•IPV4•53『线路37』
 海南卫视,https://livelyws.chinamcache.com/lyws/zb03.m3u8$LR•IPV4•53『线路38』
 海南卫视,http://t.061899.xyz/tl/tl.php?id=hinws$LR•IPV4•53『线路39』
 海南卫视,http://39.134.65.75/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225639/index.m3u8$LR•IPV4•53『线路40』
@@ -2256,9 +2256,8 @@ CETV4,https://migu.188766.xyz/?migutoken=d5d19d868e1df41e984866fc7ca15071&id=CET
 广东少儿,http://119.32.12.17:2901/udp/224.1.100.9:11111$LR•IPV4•4『线路2』
 广东少儿,http://119.32.12.17:2901/udp/224.1.100.9:11111$LR•IPV4•4『线路3』
 广东少儿,http://gmxw.7766.org:808/hls/175/index.m3u8$LR•IPV4•4『线路4』
-广东影视,http://119.32.12.17:2901/udp/224.1.100.11:11111$LR•IPV4•3『线路1』
-广东影视,http://119.32.12.17:2901/udp/224.1.100.11:11111$LR•IPV4•3『线路2』
-广东影视,http://119.32.12.17:2901/udp/224.1.100.11:11111$LR•IPV4•3『线路3』
+广东影视,http://119.32.12.17:2901/udp/224.1.100.11:11111$LR•IPV4•2『线路1』
+广东影视,http://119.32.12.17:2901/udp/224.1.100.11:11111$LR•IPV4•2『线路2』
 大湾区卫视,http://tvbox6.icu/tv/migu.php?id=dwqws$LR•IPV4•27『线路1』
 大湾区卫视,http://222.128.55.152:9080/live/dwq.m3u8$LR•IPV4•27『线路2』
 大湾区卫视,http://148.135.93.213/live.php?id=大湾区卫视$LR•IPV4•27『线路3』
