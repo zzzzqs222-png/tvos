@@ -101,7 +101,7 @@ CCTV4中文国际,http://38.75.136.137:98/gslb/dsdqpub/cctv4k.m3u8?auth=testpub$
 CCTV4中文国际,http://148.135.93.213/live.php?id=CCTV4$LR•IPV4•32『线路13』
 CCTV4中文国际,http://218.13.14.6:60050/tsfile/live/1004_1.m3u8$LR•IPV4•32『线路14』
 CCTV4中文国际,http://1.197.250.140:9901/tsfile/live/0004_1.m3u8?key=txiptv&playlive=1&authid=0$LR•IPV4•32『线路15』
-CCTV4中文国际,https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4_mbd.m3u8?auth_key=1790611200-1-b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c-dd0dc668b334b9b2c622c82b7d27ad18&yid=b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c$LR•IPV4•32『线路16』
+CCTV4中文国际,https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4_mbd.m3u8?auth_key=1790636400-1-b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c-2b7a6d96c85d624ec9c77a5d4dd5d7aa&yid=b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c$LR•IPV4•32『线路16』
 CCTV4中文国际,http://iptv.huuc.edu.cn/hls/cctv4hd.m3u8$LR•IPV4•32『线路17』
 CCTV4中文国际,http://175.8.28.207:9999/tsfile/live/0004_1.m3u8$LR•IPV4•32『线路18』
 CCTV4中文国际,http://t.061899.xyz/tl/tl.php?id=cctv4$LR•IPV4•32『线路19』
@@ -306,7 +306,7 @@ CCTV9纪录,http://198.204.228.26/live/cctv9hd.m3u8$LR•IPV4•31『线路10』
 CCTV9纪录,http://148.135.93.213/live.php?id=CCTV9$LR•IPV4•31『线路11』
 CCTV9纪录,http://218.13.14.6:60050/tsfile/live/1009_1.m3u8$LR•IPV4•31『线路12』
 CCTV9纪录,http://101.66.194.125:9901/tsfile/live/0009_1.m3u8?key=txiptv&playlive=0&authid=0$LR•IPV4•31『线路13』
-CCTV9纪录,https://v4-e6b1c5baf4e240fe63adbf68dda23435.livehwc4.com/play.kankanlive.com/live/1698423397390920.m3u8?sub_m3u8=true&edge_slice=true&user_session_id=13df79a4edf168a50fde056352116711$LR•IPV4•31『线路14』
+CCTV9纪录,https://v4-e6b1c5baf4e240fe63adbf68dda23435.livehwc4.com/play.kankanlive.com/live/1698423397390920.m3u8?sub_m3u8=true&edge_slice=true&user_session_id=b64c90ee0aabe746e5dbc7fba951d22f$LR•IPV4•31『线路14』
 CCTV9纪录,http://iptv.huuc.edu.cn/hls/cctv9hd.m3u8$LR•IPV4•31『线路15』
 CCTV9纪录,http://175.8.28.207:9999/tsfile/live/0009_1.m3u8$LR•IPV4•31『线路16』
 CCTV9纪录,http://t.061899.xyz/tl/tl.php?id=cctv9$LR•IPV4•31『线路17』
